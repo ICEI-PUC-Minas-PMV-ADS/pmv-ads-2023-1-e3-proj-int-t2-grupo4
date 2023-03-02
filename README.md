@@ -1,23 +1,23 @@
-# TÍTULO DO PROJETO
+# Punch Clock Easy
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`Desenvolvimento de Aplicações Móveis`
 
-`SEMESTRE`
+`Terceiro Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O Objetivo Geral do presente trabalho é apresentar uma solução e desenvolver um aplicativo mobile, no intuito de ajudar empresas a ter um controle com maior facilidade sobre a hora de entrada e saída de seu funcionário.
 
 ## Integrantes
 
-* Nome completo do aluno 1
+* Pedro Henrique Caetano Soares
 * Nome completo do aluno 2
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
 ## Orientador
 
-* Nome completo do professor 1
+* Mateus Curcino De Lima
 
 ## Instruções de utilização
 
