@@ -30,14 +30,11 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |--------------------|------------------------------------|----------------------------------------|
 | Maria Luiza | Alguma forma de poder diminuir as filas na hora de realizar os registros de chegada/saída. | Ter mais tempo para se concentrar no trabalho.  |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| João Pedro  | Conseguir registrar seus horários com uma significativa baixa margem de erro. Além disso, sem que ocorra de se “atrasar” no registro de hora em decorrência da espera na fila do fórum pela quantidade de pessoas.  | Confiabilidade e praticidade para realizar seus registros. |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| Gabriela | Uma forma de registrar os horários dos funcionários. | Poder gerir sua equipe de uma forma mais saudável e justa. |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| Murilo  | Uma forma de automatizar esse longo processo manual que demanda muito tempo. | Otimizar seu trabalho para que assim ele possa realizar novos projetos. |
 
 
 ## Requisitos
