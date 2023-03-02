@@ -58,13 +58,21 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-08| Alerta caso entrada saída/fora do horário previsto | ALTA |
 |RF-09| Alerta quando faltar 05 min para saída | ALTA |
 |RF-10| Saldo do banco de horas | MÉDIA |
+|RF-11| Configurar horário de entrada e duração da jornada | MÉDIA |
+
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|ID    | Descrição do Requisito  |Prioridade |
+|------|-------------------------|----|
+|RNF-01| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
+|RNF-02| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-03| Linguagem react Native |  ALTA | 
+|RNF-04| Executável em iOS e Android |  ALTA | 
+|RNF-05| Disponível offline | BAIXA |
+|RNF-06| O sistema deve ser capaz de lidar com o número necessário de usuários sem queda no desempenho | MÉDIA |
+|RNF-07| O sistema deve estar disponível quando necessário | ALTA |
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
