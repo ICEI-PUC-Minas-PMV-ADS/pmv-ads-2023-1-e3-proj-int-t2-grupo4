@@ -36,17 +36,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID   | Descrição do Requisito  | Prioridade |
 |-----|-----------------------------------------|----|
-|RF-01| Efetuar login | ALTA |
-|RF-02| Registrar entrada/saída | ALTA |
-|RF-03| Mostrar na tela o horário previsto de entrada | MÉDIA |
-|RF-04| Mostrar o horário que foi registrada a entrada | ALTA |
-|RF-05| Mostrar o tempo que se passou desde a entrada no sistema | MÉDIA |
-|RF-06| Mostrar o tempo restante de trabalho e o horário previsto de saída | MÉDIA |
-|RF-07| Histórico dos dias anteriores | MÉDIA |
-|RF-08| Alerta caso entrada saída/fora do horário previsto | ALTA |
-|RF-09| Alerta quando faltar 05 min para saída | ALTA |
-|RF-10| Saldo do banco de horas | MÉDIA |
-|RF-11| Configurar horário de entrada e duração da jornada | MÉDIA |
+|RF-01| Efetuar cadastro | ALTA |
+|RF-02| Efetuar login | ALTA |
+|RF-03| Registrar entrada/saída | ALTA |
+|RF-04| Mostrar na tela o horário previsto de entrada | MÉDIA |
+|RF-05| Mostrar o horário que foi registrada a entrada | ALTA |
+|RF-06| Mostrar o tempo que se passou desde a entrada no sistema | MÉDIA |
+|RF-07| Mostrar o tempo restante de trabalho e o horário previsto de saída | MÉDIA |
+|RF-08| Histórico dos dias anteriores | MÉDIA |
+|RF-09| Alerta caso entrada saída/fora do horário previsto | ALTA |
+|RF-10| Alerta quando faltar 05 min para saída | ALTA |
+|RF-11| Saldo do banco de horas | MÉDIA |
+|RF-12| Configurar horário de entrada e duração da jornada | MÉDIA |
 
 
 ### Requisitos não Funcionais
