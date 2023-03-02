@@ -11,7 +11,7 @@ O Objetivo Geral do presente trabalho é apresentar uma solução e desenvolver 
 ## Integrantes
 
 * Pedro Henrique Caetano Soares
-* Nome completo do aluno 2
+* Gabriel Aston Ferreira Costa
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
