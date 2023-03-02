@@ -8,19 +8,13 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Maria Luiza tem 43 anos, é formada em engenharia química e trabalha em uma indústria do ramo. A empresa em que ela trabalha possui 7.890 funcionários com horários fixos. Todos trabalham seguindo o modelo presencial em horário comercial, com pequenas exceções quando é necessário trabalhar até mais tarde ou finais de semana. Apesar de possuir vários locais onde eles conseguem bater ponto, nos horários de entrada, saída e almoço, eles acabam perdendo muito tempo, pois ficam filas enormes devido a quantidade de funcionários. 
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+João Pedro tem 20 anos e trabalha no fórum de sua cidade. O fórum tem poucos funcionários e no setor em que João trabalha, são apenas funcionários terceirizados. Todos eles seguem o modelo presencial com horários fixos e não pode ocorrer um atraso de mais de 5 minutos, porque a empresa que os contratou não permite. No fórum existe apenas um local onde eles batem ponto e é com a máquina cartográfica que carimba o papel, depois a empresa confere. As vezes acontece do horário ser carimbado no lugar errado e então ele tem que levar no Departamento Pessoal da empresa para que arrume manualmente os erros. 
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Gabriela tem 34 anos e é gerente de uma startup. Na empresa em que ela trabalha, eles adotaram o modelo remoto de trabalho após a pandemia. Antes, eles batiam ponto por biometria dentro da empresa e agora ficou complicado saber se os funcionários estão realmente cumprindo seu horário de serviço e de fazer o cálculo de horas extras de cada funcionário. 
+
+Murilo tem 27 anos e trabalha no setor de Departamento Pessoal de uma empresa de médio porte. O seu time na empresa tem poucos agentes e os funcionários da empresa batem ponto através da máquina cartográfica. Apesar de não ter muitas pessoas que trabalham nesse local, o Murilo tem que conferir manualmente todos os pontos antes do acerto todos os meses. Com isso, ele tem que dedicar muito tempo para poder conferir um a um. Com esse tempo de trabalho manual, ele poderia se dedicar a novos projetos, pensar em melhorias para o setor, ajudar os outros funcionários que estão na empresa a menos tempo e ainda demandam uma certa atenção, entre diversas outras coisas. 
 
 ## Histórias de Usuários
 
