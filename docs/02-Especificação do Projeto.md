@@ -29,11 +29,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 | Maria Luiza | Alguma forma de poder diminuir as filas na hora de realizar os registros de chegada/saída. | Ter mais tempo para se concentrar no trabalho.  |
-|--------------------|------------------------------------|----------------------------------------|
 | João Pedro  | Conseguir registrar seus horários com uma significativa baixa margem de erro. Além disso, sem que ocorra de se “atrasar” no registro de hora em decorrência da espera na fila do fórum pela quantidade de pessoas.  | Confiabilidade e praticidade para realizar seus registros. |
-|--------------------|------------------------------------|----------------------------------------|
 | Gabriela | Uma forma de registrar os horários dos funcionários. | Poder gerir sua equipe de uma forma mais saudável e justa. |
-|--------------------|------------------------------------|----------------------------------------|
 | Murilo  | Uma forma de automatizar esse longo processo manual que demanda muito tempo. | Otimizar seu trabalho para que assim ele possa realizar novos projetos. |
 
 
