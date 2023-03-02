@@ -76,3 +76,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 O diagrama contempla as principais ligações entre os casos de uso e permite detalhar os Requisitos Funcionais identificados na etapa anterior.
 
 ![Diagrama de Casos de Uso](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/blob/main/docs/img/casos_de_uso.png)
+
+
+# Matriz de Rastreabilidade
+
+A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
+
+![matriz de rastreabilidade](img/Matriz-de-Rastreabilidade.png)
