@@ -13,7 +13,7 @@ O Objetivo Geral do presente trabalho é apresentar uma solução e desenvolver 
 * Pedro Henrique Caetano Soares
 * Gabriel Aston Ferreira Costa
 * Rafael Alvarenga Rodrigues
-* Nome completo do aluno 4
+* Rafael Alves de Souza
 
 ## Orientador
 
