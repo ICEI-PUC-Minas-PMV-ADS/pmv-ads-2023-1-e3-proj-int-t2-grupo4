@@ -27,6 +27,15 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Gabriela | Uma forma de registrar os horários dos funcionários. | Poder gerir sua equipe de uma forma mais saudável e justa. |
 | Murilo  | Uma forma de automatizar esse longo processo manual que demanda muito tempo. | Otimizar seu trabalho para que assim ele possa realizar novos projetos. |
 
+## Modelagem do Processo de Negócio 
+
+### Análise da Situação Atual
+
+Proposta de sistema de registro de ponto eletrônico feito via aplicativo mobile. Funcionários de empresas poderão registrar entrada e saída do trabalho com o próprio celular com cadastro inicial feito pelo setor de RH autorizando o funcionário a utilizar o aplicativo. 
+
+### Processo 1 – REGISTRO DE PONTO
+![Processo 1](img/modelo-negocio.jpeg)
+
 
 ## Requisitos
 
