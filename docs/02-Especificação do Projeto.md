@@ -78,8 +78,25 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| O projeto deverá seguir o cronograma proposto pela PUC:
+
+      1ª ETAPA: Concepção, Proposta de Solução e Início da Elaboração do Projeto da Solução: 
+      Definição de proposta de trabalho e elaboração inicial do projeto arquitetural - 01/02/2023 
+      até 05/03/2023
+
+      2ª ETAPA: Continuidade da Elaboração do Projeto da Solução e Início do Desenvolvimento da Solução: 
+      Elaboração do projeto arquitetural e início do  desenvolvimento da aplicação móvel - 06/03/2023 
+      até 02/04/2023
+
+     3ª ETAPA: Continuidade do Desenvolvimento da Solução: 
+     Desenvolvimento da aplicação móvel - 03/04/2023 até 07/05/2023
+
+     4ª ETAPA: Continuidade do Desenvolvimento da Solução: 
+     Desenvolvimento da aplicação móvel - 08/05/2023 até 04/06/2023
+
+     5ª ETAPA: Diagnóstico, entrega da solução e apresentação - 05/06/2023 até 23/06/2023 |
+|02| O aplicativo deve se restringir às tecnologias: BD SQL e Reactive Native. |
+|03| A equipe não pode subcontratar o desenvolvimento do trabalho. |
 
 ## Diagrama de Casos de Uso
 
