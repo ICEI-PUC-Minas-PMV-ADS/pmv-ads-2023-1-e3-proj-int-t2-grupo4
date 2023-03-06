@@ -14,6 +14,8 @@ O Objetivo Geral do presente trabalho é apresentar uma solução e desenvolver 
 * Gabriel Aston Ferreira Costa
 * Rafael Alvarenga Rodrigues
 * Rafael Alves de Souza
+* Laura Santos Andrade
+* Ian Merlo Corrêa
 
 ## Orientador
 
