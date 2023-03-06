@@ -10,12 +10,12 @@ O Objetivo Geral do presente trabalho é apresentar uma solução e desenvolver 
 
 ## Integrantes
 
-* Pedro Henrique Caetano Soares
 * Gabriel Aston Ferreira Costa
+* Ian Merlo Corrêa
+* Laura Santos Andrade
+* Pedro Henrique Caetano Soares
 * Rafael Alvarenga Rodrigues
 * Rafael Alves de Souza
-* Laura Santos Andrade
-* Ian Merlo Corrêa
 
 ## Orientador
 
