@@ -15,7 +15,6 @@ O projeto segue a seguinte convenção para o nome de branches:
 *Exemplo da nossa gestão de código:*
 
 ![fluxo gestao de codigo](./img/fluxo-gestao-codigo.png)
-<!--![logo](imagem.png)-->
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
 
