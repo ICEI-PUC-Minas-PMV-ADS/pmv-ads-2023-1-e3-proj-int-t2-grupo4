@@ -50,7 +50,4 @@ Essa branch sera trabalhada localmente, enquanto a funcionalidade não estiver p
 
 O projeto será gerenciado pelo GitHub projects, assim como a marcação das entregas, também feita pelo próprio GitHub.
 
-Abaixo, a forma que nosso Kanban está organizado:
-
-![Kanban-projeto](./img/kanban-project.png)
 
