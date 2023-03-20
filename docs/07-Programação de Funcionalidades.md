@@ -36,7 +36,7 @@ A Tela "Marcação de Ponto" possui um widget onde o usuário irá pressionar o 
 
 ## Página de Registros Realizados
 
-A Tela "Reistros Realizados" é uma página onde consta todos os registros feitos através do aplicativo.
+A Tela "Registros Realizados" é uma página onde consta todos os registros feitos através do aplicativo.
 
 ![marcacoes](./img/marcacoes.png)
 
