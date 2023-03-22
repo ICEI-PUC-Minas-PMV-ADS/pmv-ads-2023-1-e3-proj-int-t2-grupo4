@@ -36,6 +36,24 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Passos 	| - Fazer o login <br> - Clicar na opção ENTRADA <br> - Verificar se o aplicativo exibe o cronômetro. |
 |Critério de Êxito | - Exibição do cronômetro após entrada no sistema |
 |  	|  	|
+| **Caso de Teste** 	| **CT-06 – Mostrar o tempo restante de trabalho e o horário previsto de saída**	|
+|Requisito Associado | RF-06	- Deve exibir o horário previsto de saída e o tempo decorrido após última entrada no dia. |
+| Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente o horário de saida do usuário. |
+| Passos 	| - Fazer o login <br> - Clicar na opção ENTRADA <br> - Verificar se o aplicativo exibe o horário de saída. |
+|Critério de Êxito | - Exibição do horário de saída após entrada no sistema. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-07 – Histórico dos dias anteriores**	|
+|Requisito Associado | RF-07	- O aplicativo deve ter opção com histórico dos registros efetuados anteriormente. |
+| Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente o histórico dos registros no sistema. |
+| Passos 	| - Fazer o login <br> - Clicar na opção HISTÓRICO <br> - Verificar se o aplicativo exibe o histórico dos registros. |
+|Critério de Êxito | - Exibição do histórico dos registros sistema |
+|  	|  	|
+| **Caso de Teste** 	| **CT-08 – Saldo do banco de horas**	|
+|Requisito Associado | RF-08	- Deve exibir para o usuário o saldo de banco de horas. |
+| Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente o saldo do banco de horas do usuário. |
+| Passos 	| - Fazer o login <br> - Verificar se o aplicativo exibe o saldo do banco de horas. |
+|Critério de Êxito | - Exibição do banco de horas após login no sistema |
+|  	|  	|
  
 ## Ferramentas de Testes (Opcional)
 
