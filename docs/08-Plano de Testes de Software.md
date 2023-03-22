@@ -15,12 +15,12 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | **Caso de Teste** 	| **CT-02 – Efetuar login**	|
 |Requisito Associado | RF-02 - Deve possuir tela login para usuários já cadastrados. |
 | Objetivo do Teste 	| Verificar se o usuário é capaz de realizar login. |
-| Passos 	| - Acessar o aplicativo <br> - Clicar no botão de Login <br> - Preencher o campo de id <br> - Preencher o campo da senha <br> - <br> - Clicar em "Login" |
+| Passos 	| - Acessar o aplicativo <br> - Clicar no botão de Login <br> - Preencher o campo de id <br> - Preencher o campo da senha <br> - Clicar em "Login" |
 |Critério de Êxito | - O login foi realizado com sucesso. |
 |  	|  	|
 | **Caso de Teste** 	| **CT-03 – Registrar entrada/saída**	|
 |Requisito Associado | RF-03	- Deve possibilitar o registro de entrada e saída do usuário. |
-| Objetivo do Teste 	| Verificar se o usuário consegue registrar seu horário de entrada e sáida no sistema. |
+| Objetivo do Teste 	| Verificar se o usuário consegue registrar seu horário de entrada e saída no sistema. |
 | Passos 	| - Fazer o login <br> - Clicar na opção ENTRADA e, posteriormente, clicar na opção SAIDA |
 |Critério de Êxito | - Registro dos horário de entrada e saída corretamente no aplicativo. |
 |  	|  	|
@@ -33,7 +33,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | **Caso de Teste** 	| **CT-05 – Mostrar o tempo que se passou desde a entrada no sistema**	|
 |Requisito Associado | RF-05	- Deve disponibilizar ao usuário cronômetro medindo o tempo desde sua última entrada no sistema. |
 | Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente o cronômetro do tempo de entrada no sistema. |
-| Passos 	| - Fazer o login <br> - Clicar na opção ENTRADA <br> - Verificar se o aplicativo exibo o cronômetro. |
+| Passos 	| - Fazer o login <br> - Clicar na opção ENTRADA <br> - Verificar se o aplicativo exibe o cronômetro. |
 |Critério de Êxito | - Exibição do cronômetro após entrada no sistema |
 |  	|  	|
  
