@@ -5,7 +5,7 @@
 # Plano de Testes de Software
 Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
  
-| **Caso de Teste** 	| **CT-01 – Acesso a página "Home e cadastro"** 	|
+| **Caso de Teste** 	| **CT-01 – Acesso a página "Cadastro"** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-01 - Deve possuir tela de cadastro com informações básicas do usuário. |
 | Objetivo do Teste 	| Acessar a página "Cadastro" e utilizar suas funcionalidades |
