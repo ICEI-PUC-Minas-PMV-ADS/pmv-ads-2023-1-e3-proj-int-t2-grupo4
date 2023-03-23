@@ -12,6 +12,10 @@ Diagrama que permite a modelagem física de um sistema, através da visão dos s
 
 Inclua um diagrama da solução e descreva os módulos e as tecnologias que fazem parte da solução. Discorra sobre o diagrama.
 
+## Diagrama ER
+
+![Diagrama ER](img/Diagrama_ER.png)
+
 A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim
 que o usuário entra na plataforma, ele é apresentado à tela inicial
 (Tela 1) onde ele é confrontado com as opões de editar seu perfil ou
