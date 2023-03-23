@@ -2,7 +2,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
 
-# Plano de Testes de Software
+## Plano de Testes de Funcionalidades
 Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
  
 | **Caso de Teste** 	| **CT-01 – Acesso a página "Cadastro"** 	|
@@ -54,15 +54,39 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Passos 	| - Fazer o login <br> - Verificar se o aplicativo exibe o saldo do banco de horas. |
 |Critério de Êxito | - Exibição do banco de horas após login no sistema |
 |  	|  	|
- 
-## Ferramentas de Testes (Opcional)
 
-Comente sobre as ferramentas de testes utilizadas.
+## Plano de Testes de Usabilidades
+
+Os testes de usabilidade avaliam, não só a experiência dos usuários no momento em que interagem com o sistema, mas também como as funcionalidades e as regras de negócio impactam na interação entre usuário e o sistema. Busca-se testar neste caso se o tipo de informação, a linguagem, o design das páginas e a plataforma tecnológica utilizados proporcionam a eles a melhor experiência possível de uso. 
+
+Os testes terão como objetivos obter respostas para os seguintes pontos:
+
+1)	O sistema é intuitivo e de fácil utilização?
+2)	O sistema é responsivo?
+3)	Os usuários alcançam seus objetivos em poucos cliques?
+4)	A navegabilidade é agradável e fluída?
+
+As dimensões abordadas neste teste de usabilidade serão as seguintes:
+Usuários: 03 usuários com idades variando entre 16 e 65 anos com perfil social variado
+Ferramenta de Coleta de Dados: Registro de impressões durante a realização do teste de forma presencial
+Equipe (Acompanhamento do Teste): O acompanhamento será feito por 01 facilitador/observador	
+Report:  O facilitador/observador fará todas as anotações pertinentes em relatório especifico e trará para análise da equipe de desenvolvimento
+
+## Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar ##
+
+|Caso de Teste | 01 - Verificar responsividade|
+|:--|:--|
+|**Objetivo do teste**| Avaliar se o sistema é de fácil utilização e responsivo pelos usuários| 
+||**Passos**|
+||1) Acessar o site|
+||2) Efetuar o cadastro como usuário|
+||3) Registrar "ENTRADA" no sistema|
+||4) Registrar "SAÍDA" no sistema|
+||5) Acessar o histórico dos registros na opção "HISTÓRICO"|
+||6) Efetuar “LOGOUT”|
+|**Critérios de Êxito**|O usuário deve considerar o sistema intuitivo e de fácil utilização|
+
+## Confecção e Analise do relatório ##
+
+O observador irá registrar o tempo para conclusão dos testes, a opinião do usuário em relação ao sistema, sugestões de melhorias e outras observações de utilização que julgar pertinente. A equipe de posse dos relatórios fará a avaliação e ajustes necessários.
  
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
