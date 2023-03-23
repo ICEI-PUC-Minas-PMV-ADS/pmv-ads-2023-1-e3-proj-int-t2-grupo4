@@ -66,10 +66,10 @@ Os testes terão como objetivos obter respostas para os seguintes pontos:
 3)	Os usuários alcançam seus objetivos em poucos cliques?
 4)	A navegabilidade é agradável e fluída?
 
-As dimensões abordadas neste teste de usabilidade serão as seguintes:
-Usuários: 03 usuários com idades variando entre 16 e 65 anos com perfil social variado
-Ferramenta de Coleta de Dados: Registro de impressões durante a realização do teste de forma presencial
-Equipe (Acompanhamento do Teste): O acompanhamento será feito por 01 facilitador/observador	
+As dimensões abordadas neste teste de usabilidade serão as seguintes: <br>
+Usuários: 03 usuários com idades variando entre 16 e 65 anos com perfil social variado <br>
+Ferramenta de Coleta de Dados: Registro de impressões durante a realização do teste de forma presencial <br>
+Equipe (Acompanhamento do Teste): O acompanhamento será feito por 01 facilitador/observador	<br>
 Report:  O facilitador/observador fará todas as anotações pertinentes em relatório especifico e trará para análise da equipe de desenvolvimento
 
 ### Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar ###
