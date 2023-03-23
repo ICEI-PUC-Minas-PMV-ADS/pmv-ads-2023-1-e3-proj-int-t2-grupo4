@@ -72,7 +72,7 @@ Ferramenta de Coleta de Dados: Registro de impressões durante a realização do
 Equipe (Acompanhamento do Teste): O acompanhamento será feito por 01 facilitador/observador	
 Report:  O facilitador/observador fará todas as anotações pertinentes em relatório especifico e trará para análise da equipe de desenvolvimento
 
-## Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar ##
+### Planejamento de realização de testes com usuários definindo as operações que os usuários devem realizar ###
 
 |Caso de Teste | 01 - Verificar responsividade|
 |:--|:--|
@@ -86,7 +86,7 @@ Report:  O facilitador/observador fará todas as anotações pertinentes em rela
 ||6) Efetuar “LOGOUT”|
 |**Critérios de Êxito**|O usuário deve considerar o sistema intuitivo e de fácil utilização|
 
-## Confecção e Analise do relatório ##
+### Confecção e Analise do relatório ###
 
 O observador irá registrar o tempo para conclusão dos testes, a opinião do usuário em relação ao sistema, sugestões de melhorias e outras observações de utilização que julgar pertinente. A equipe de posse dos relatórios fará a avaliação e ajustes necessários.
  
