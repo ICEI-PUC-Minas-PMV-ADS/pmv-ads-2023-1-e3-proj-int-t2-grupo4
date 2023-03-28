@@ -42,6 +42,10 @@ para a Tela 2.
 
 ![Exemplo de UserFlow](img/userflow.jpg)
 
+## Indicadores de Desempenho e Metas 
+
+![Indicador de Desempenho e Metas](img/Indicadores_de_desempenho.jpg)
+
 
 ## Tecnologias Utilizadas
 
