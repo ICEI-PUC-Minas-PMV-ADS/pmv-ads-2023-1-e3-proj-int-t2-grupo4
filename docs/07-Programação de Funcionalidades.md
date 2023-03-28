@@ -15,7 +15,7 @@ A Tela "Cadastro" possui um formulário contendo: Nome, e-mail, telefone, nº do
 
 A Tela "Login" possui dois campos para que o funcionario utlize o Nº do funcionário e a senha para conseguir acessar o aplicativo.
 
-![login](./img/login.png)
+![Captura de tela 2023-03-28 155009](https://user-images.githubusercontent.com/103431710/228338352-2bf5fca3-9659-4053-b329-a0120c31825d.png)
 
 ### Requisitos Atendidos:
 <ul>
