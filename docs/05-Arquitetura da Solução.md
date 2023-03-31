@@ -16,31 +16,15 @@ Inclua um diagrama da solução e descreva os módulos e as tecnologias que faze
 
 ![Diagrama ER](img/Diagrama_ER.png)
 
-A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim
-que o usuário entra na plataforma, ele é apresentado à tela inicial
-(Tela 1) onde ele é confrontado com as opões de editar seu perfil ou
-então visualizar sua galeria.
+## Diagrama BPMN
 
-Caso ele opte por seguir pelo primeiro caminho (Editar Perfil), ele é
-redirecionado para a tela de edição de perfil (Tela 2), onde pode
-atualizar seus dados cadastrais. Nessa tela, o usuário também pode
-escolher para editar sua foto de perfil. Ao selecionar essa opção, ele é
-redirecionado para a Tela 3, onde ele a imagem expandida do perfil do
-usuário é mostrado. Ao selecionar a opção para atualizar a imagem, uma
-nova janela abre pedindo para o usuário fazer o upload da nova foto.
-Assim que o processo termina um pop-up exibe o status para o usuário
-(Tela 4) e o usuário é redirecionado para a Tela 2.
+Temos aqui um diagrama sem a implementação do nosso aplicativo, podemos ver que existe uma demanda de outro empregado no caso o supervisor.
 
-Caso o usuário opte seguir pelo segundo caminho (Visualizar Galeria) ele
-é redirecionado para a Tela 5 com todas as fotos que o usuário possui. O
-usuário pode clicar em um post qualquer para visualizar os detalhes do
-post (Tela 6). Nessa tela, ele pode então escolher editar o post, sendo
-redirecionado para a Tela 7. Ao editar as informações, o usuário pode
-escolher salvar ou deletar o post. Em ambos os casos o status é
-notificado para o usuário (Tela 8) e em seguida ele é redirecionado
-para a Tela 2.
+![Diagrama_BPMN_APP](img/BPMN_APP.png)
 
-![Exemplo de UserFlow](img/userflow.jpg)
+E aqui temos outro diagrama já com a implementação do aplicativo, podemos notar que não a a necessidade do supervisor gerir os horarios de ponto dos empregados, podendo focar seu trabalho em gestão da sua área
+
+![Exemplo de UserFlow](img/BPMN_SEM_APP.png)
 
 ## Indicadores de Desempenho e Metas 
 
@@ -56,9 +40,6 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 ## Tecnologias Utilizadas
 
 React-Native Expo CLI.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
 
 ## Hospedagem
 
