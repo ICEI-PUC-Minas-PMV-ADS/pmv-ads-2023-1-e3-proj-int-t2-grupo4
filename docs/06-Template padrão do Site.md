@@ -7,3 +7,6 @@
 --Tela de Login-- 
 
 --Marcação de Ponto--
+
+
+--Página de Registros Realizados--
