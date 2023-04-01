@@ -11,3 +11,4 @@
 ![ponto](./img/ponto.png)
 
 --Página de Registros Realizados--
+![marcacoes](./img/marcacoes.png)
