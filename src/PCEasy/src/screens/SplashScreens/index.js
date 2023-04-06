@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet, View, Image } from 'react-native';
-import { CustomText } from '../../components'
-import imageLogo from '../../../assets/fingerprint.png'
+import { StyleSheet, View } from 'react-native';
+import { Text, Logo } from '../../components'
+
 
 export const SplashScreen = () => {
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} source={imageLogo} />
-      <CustomText style={styles.textTitle}>Punch Clock Easy</CustomText>
+      <Logo />
+      <Text  >Punch Clock <Text color="#004AAD" letterSpacing={4}>Easy</Text></Text>
     </View>
   );
 }
@@ -19,9 +19,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logo: {
-    height: 100,
-    width: 100,
-    alignItems: 'stretch'
-  }
+  
 });

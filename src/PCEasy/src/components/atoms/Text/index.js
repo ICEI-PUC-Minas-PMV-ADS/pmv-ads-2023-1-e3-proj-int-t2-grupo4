@@ -1,22 +1,12 @@
 import react from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { CustomText } from './styles'
 
-export const CustomText = ({children}) => {
+export const Text = ({children, color, letterSpacing}) => {
     return (      
-      <Text style={styles.textTitle}>
+      <CustomText color={color} letterSpacing={letterSpacing}>
           {children}
-      </Text>  
+      </CustomText>  
            
     )
 }
 
-const styles = StyleSheet.create({    
-    textTitle: {
-      color: '#fff',    
-    }, 
-    textEasy: {
-      color: '#004AAD',
-      letterSpacing: 4      
-    }
-  });
-  
