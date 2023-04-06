@@ -1,7 +1,7 @@
 # Punch Clock Easy
 
-![LOGO](/src/PCEasy/assets/fingerprint.png)
-src/PCEasy/assets/fingerprint.png
+![LOGO](/docs/img/PCEasy.png)
+
 
 `ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
