@@ -1,23 +1,17 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Text, Logo } from '../../components'
-
+import React from 'react'
+import { StyleSheet, View } from 'react-native'
+import { Text, Logo, Container } from '../../components'
 
 export const SplashScreen = () => {
   return (
-    <View style={styles.container}>
+    <Container align="center" justify="center">
       <Logo />
-      <Text  >Punch Clock <Text color="#004AAD" letterSpacing={4}>Easy</Text></Text>
-    </View>
-  );
+      <Text>
+        Punch Clock
+        <Text color="#004AAD" letterSpacing={'4px'}>
+          Easy
+        </Text>
+      </Text>
+    </Container>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#202020',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  
-});
