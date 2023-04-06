@@ -1,8 +1,5 @@
 # Punch Clock Easy
 
-![LOGO](/docs/img/PCEasy.png)
-
-
 `ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
 `Desenvolvimento de Aplicações Móveis`
