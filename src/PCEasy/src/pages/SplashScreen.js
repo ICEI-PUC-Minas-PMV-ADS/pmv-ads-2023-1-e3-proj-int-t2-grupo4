@@ -3,10 +3,10 @@ import React, { useEffect } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import imageLogo from "../../assets/fingerprint.png";
 
-export const SplashScreen = ({ navigation }) => {
+export default SplashScreen = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate("Home");
+      navigation.navigate("Login");
     }, 1000);
   }, []);
 

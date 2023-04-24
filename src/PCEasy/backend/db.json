@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "cpf": "123.456.789-00",
+      "senha": "senha123",
+      "email": "joao.silva@example.com",
+      "endereco": "Rua das Flores, 123",
+      "dataRegistro": "2021-01-01"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Santos",
+      "cpf": "987.654.321-00",
+      "senha": "senha456",
+      "email": "maria.santos@example.com",
+      "endereco": "Avenida dos Bosques, 456",
+      "dataRegistro": "2021-02-15"
+    },
+    {
+      "id": 3,
+      "nome": "Carlos Pereira",
+      "cpf": "789.123.456-00",
+      "senha": "senha789",
+      "email": "carlos.pereira@example.com",
+      "endereco": "Praça Central, 789",
+      "dataRegistro": "2021-03-10"
+    }
+  ]
+}
