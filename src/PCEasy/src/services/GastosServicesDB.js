@@ -2,6 +2,17 @@ import Database from "./DbServices";
 
 const DB_EXEC = Database.getConnection();
 
+const now = new Date();
+const formattedDate = now.toLocaleString("pt-BR", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour12: false,
+});
+
 export const getUser = async () => {
   try {
     let results = await DB_EXEC(`select * from users`);
@@ -22,7 +33,7 @@ export const insertUser = async (param) => {
         param.senha,
         param.email,
         param.endereco,
-        param.data_registro,
+        formattedDate,
         param.idade,
       ]
     );

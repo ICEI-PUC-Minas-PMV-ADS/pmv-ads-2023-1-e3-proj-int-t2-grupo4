@@ -78,12 +78,6 @@ export default function AlimentarDB() {
           value={endereco}
           onChangeText={setEndereco}
         />
-        <Text style={styles.label}>Data de Registro:</Text>
-        <TextInput
-          style={styles.input}
-          value={dataRegistro}
-          onChangeText={setDataRegistro}
-        />
         <Text style={styles.label}>Idade:</Text>
         <TextInput
           style={styles.input}
