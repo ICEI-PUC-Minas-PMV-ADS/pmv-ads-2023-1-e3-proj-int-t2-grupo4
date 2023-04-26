@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, StyleSheet } from "react-native";
+import { Button } from 'react-native-paper';
 import { loginUser } from "../services/GastosServicesDB"; // Importe sua função loginUser aqui
 import { useNavigation } from "@react-navigation/native"; // Importe o hook useNavigation do React Navigation
 
@@ -30,22 +31,26 @@ const LoginForm = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Formulário de Login</Text>
-      <TextInput style={styles.input}
-        value={cpf}
-        onChangeText={(text) => setCpf(text)}
-        placeholder="CPF"
-      />
-      <TextInput style={styles.input}
-        value={senha}
-        onChangeText={(text) => setSenha(text)}
-        placeholder="Senha"
-        secureTextEntry
-      />
-      <Button style={[styles.button, styles.buttonText]} title="Login" onPress={handleLogin} />
-      <Button style={[styles.button, styles.buttonText]} title="Registrar" onPress={() => handleRegister(navigation)} />
+      <View style={styles.formContainer}>
+        <Text style={styles.labelLogin}>Formulário de Login</Text>
+        <TextInput style={styles.input}
+          value={cpf}
+          onChangeText={(text) => setCpf(text)}
+          placeholder="CPF"
+        />
+        <TextInput style={styles.input}
+          value={senha}
+          onChangeText={(text) => setSenha(text)}
+          placeholder="Senha"
+          secureTextEntry
+        />
+        <Button  mode="contained" style={styles.buttons} labelStyle={styles.buttonText} onPress={handleLogin}>Login</Button>
+        <Button  mode="contained" style={styles.buttons} labelStyle={styles.buttonText} onPress={() => handleRegister(navigation)}>Cadastre-se</Button>
+        
+      </View>
     </View>
   );
+  
 };
 
 const styles = StyleSheet.create({
@@ -53,20 +58,25 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: '#202020',
   },
-  backgroundImage: {
-    ...StyleSheet.absoluteFillObject,
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover",
+
+  labelLogin: {
+    fontSize: 32,
+    color: '#066a75',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    paddingBottom: 30,
   },
+  
   formContainer: {
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
+    backgroundColor: "#FFF",
     padding: 20,
     borderRadius: 10,
     width: "80%",
     alignItems: "center",
   },
+
   input: {
     width: "100%",
     height: 40,
@@ -76,20 +86,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingLeft: 10,
   },
-  button: {
-    backgroundColor: "#4287f5",
-    borderRadius: 5,
-    padding: 10,
-    width: "100%",
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "white",
-    fontWeight: "bold",
-  },
-  label: {
 
-  }
+  buttons: {
+    margin: 4,
+    backgroundColor: '#099DAD',
+    borderRadius: 5,
+    padding: 3,
+  },
+
+  buttonText: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+  },
 });
 
 
