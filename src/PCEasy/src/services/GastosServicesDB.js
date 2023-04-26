@@ -48,7 +48,7 @@ export const insertUser = async (param) => {
 export const updateUser = async (param) => {
   try {
     let results = await DB_EXEC(
-      `update users set nome=?, cpf=?, senha=?, email=?, endereco=?, data_registro=?, idade=?,
+      `update users set nome=?, cpf=?, senha=?, email=?, endereco=?, data_registro=?, idade=?
       where id=?`,
       [
         param.nome,
@@ -65,6 +65,16 @@ export const updateUser = async (param) => {
     return results.rowsAffected;
   } catch (error) {
     console.error("Erro ao atualizar usuário:", error);
+    throw error;
+  }
+};
+
+export const getUserById = async (id) => {
+  try {
+    let results = await DB_EXEC(`select * from users where id=?`, [id]);
+    return results.rows.item(0);
+  } catch (error) {
+    console.error("Erro ao buscar usuário:", error);
     throw error;
   }
 };

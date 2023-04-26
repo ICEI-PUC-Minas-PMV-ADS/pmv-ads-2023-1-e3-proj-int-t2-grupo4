@@ -42,8 +42,8 @@ const LoginForm = () => {
         placeholder="Senha"
         secureTextEntry
       />
-      <Button style={styles.button} title="Login" onPress={handleLogin} />
-      <Button style={styles.button} title="Registrar" onPress={() => handleRegister(navigation)} />
+      <Button style={[styles.button, styles.buttonText]} title="Login" onPress={handleLogin} />
+      <Button style={[styles.button, styles.buttonText]} title="Registrar" onPress={() => handleRegister(navigation)} />
     </View>
   );
 };

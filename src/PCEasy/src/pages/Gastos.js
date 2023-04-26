@@ -25,8 +25,9 @@ const LoginForm = () => {
   };
 
   return (
-    <View>
+    <View style = {styles.container}>
       <Text>Formulário de Login</Text>
+      
       <TextInput
         value={cpf}
         onChangeText={(text) => setCpf(text)}
@@ -46,5 +47,47 @@ const LoginForm = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  formContainer: {
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
+    padding: 20,
+    borderRadius: 10,
+    width: "80%",
+    alignItems: "center",
+  },
+
+  input: {
+    width: "100%",
+    height: 40,
+    borderRadius: 5,
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 10,
+    paddingLeft: 10,
+  },
+
+  button: {
+    backgroundColor: "#4287f5",
+    borderRadius: 5,
+    padding: 10,
+    width: "100%",
+    alignItems: "center",
+  },
+
+  buttonText: {
+    color: "white",
+    fontWeight: "bold",
+  },
+
+});
+{[styles.button, styles.buttonText]}
 
 export default LoginForm;

@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import SplashScreen from "../pages/SplashScreen";
 import PointRegister from "../pages/PointRegister";
 import UserInfo from "../pages/UserInfo";
+import UserUpdate from "../pages/UserUpdate"
 // Restante do código
 
 const Stack = createNativeStackNavigator();
@@ -52,6 +53,13 @@ const Main = () => {
       <Stack.Screen
         name="UserInfo"
         component={UserInfo}
+        options={{
+          header: () => null,
+        }}
+      />
+      <Stack.Screen
+        name="UserUpdate"
+        component={UserUpdate}
         options={{
           header: () => null,
         }}
