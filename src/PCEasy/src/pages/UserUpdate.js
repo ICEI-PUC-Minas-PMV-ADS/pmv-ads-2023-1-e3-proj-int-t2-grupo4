@@ -22,6 +22,7 @@ export default function UpdateUser() {
     const navigation = useNavigation();
     const route = useRoute();
     const userId = route.params.userId;
+    const [userData2, setUserData] = useState("");
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -33,6 +34,7 @@ export default function UpdateUser() {
             setEndereco(userData.endereco);
             setDataRegistro(userData.data_registro);
             setIdade(userData.idade);
+            setUserData(userData);
         };
         fetchUserData();
     }, [userId]);
@@ -40,31 +42,34 @@ export default function UpdateUser() {
     const handleFormSubmit = async () => {
         // Chamar a função updateUser para atualizar os dados no banco de dados
         const result = await updateUser({
-          id: userId,
-          nome,
-          cpf,
-          senha,
-          email,
-          endereco,
-          data_registro: dataRegistro,
-          idade,
+            id: userId,
+            nome,
+            cpf,
+            senha,
+            email,
+            endereco,
+            data_registro: dataRegistro,
+            idade,
         });
-      
         if (result > 0) {
-          Alert.alert("Sucesso", "Dados atualizados com sucesso!", [
-            { text: "OK", onPress: () => navigation.goBack() },
-          ]);
+            Alert.alert("Sucesso", ` Dados atualizados com sucesso!`, [
+                {
+                    text: "OK", onPress: () => navigation.navigate('UserInfo', {
+                        test: userId,
+                    })
+                },
+            ]);
         } else {
-          Alert.alert(
-            "Erro",
-            "Ocorreu um erro ao atualizar os dados no banco de dados."
-          );
+            Alert.alert(
+                "Erro",
+                "Ocorreu um erro ao atualizar os dados no banco de dados."
+            );
         }
-      };
+    };
 
     return (
         <View style={styles.container}>
-            
+
             <View style={styles.formContainer}>
                 <Text style={styles.label}>Nome:</Text>
                 <TextInput style={styles.input} value={nome} onChangeText={setNome} />

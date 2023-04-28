@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, StyleSheet } from "react-native";
+import { View, Text, TextInput, StyleSheet, Alert } from "react-native";
 import { Button } from 'react-native-paper';
 import { loginUser } from "../services/GastosServicesDB"; // Importe sua função loginUser aqui
 import { useNavigation } from "@react-navigation/native"; // Importe o hook useNavigation do React Navigation
@@ -18,7 +18,7 @@ const LoginForm = () => {
       if (usuarioLogado) {
         navigation.navigate("Home", { usuario: usuarioLogado });
       } else {
-        console.log("CPF ou senha inválidos."); // Trate o caso de CPF ou senha inválidos
+        Alert.alert("CPF ou senha inválidos."); // Trate o caso de CPF ou senha inválidos
       }
     } catch (error) {
       console.error("Erro ao realizar login:", error); // Trate o erro caso ocorra
