@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { BottomNavigation, Text } from "react-native-paper";
 
-import Calculadora from "./Calculadora";
 import Perfil from "./UserInfo";
-import Login from "./Login";
+
 import PointRegister from "./PointRegister";
 
 const Home = ({ route }) => {

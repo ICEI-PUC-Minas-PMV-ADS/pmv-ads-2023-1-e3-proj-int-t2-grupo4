@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { getUserById } from "../services/GastosServicesDB";
+import { deleteUser, getUserById } from "../services/GastosServicesDB";
+import { LogBox } from "react-native";
 
 const Perfil = ({ usuario }) => {
   const [id, setId] = useState("");
@@ -14,19 +15,34 @@ const Perfil = ({ usuario }) => {
   const [idade, setIdade] = useState("");
   const navigation = useNavigation();
   const route = useRoute();
+
   const handleUserUpdate = (navigation) => {
-    if(!usuario)
-      navigation.navigate('UserUpdate', { userId: id});
-    else
-      navigation.navigate('UserUpdate', { userId: usuario.id}); 
-  }
+    if (!usuario) navigation.navigate("UserUpdate", { userId: id });
+    else navigation.navigate("UserUpdate", { userId: usuario.id });
+  };
+
+  const handleDeleteUser = async () => {
+    try {
+      if (usuario.id == undefined) {
+        await deleteUser(id);
+      } else {
+        await deleteUser(usuario.id);
+      }
+      LogBox.ignoreLogs([
+        "Internal React error: Attempted to capture a commit phase error inside a detached tree",
+      ]);
+      navigation.navigate("Login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     teste(route);
 
-
     function teste(route) {
-      const { test } = route.params == null || route.params == undefined ? 0 : route.params;
+      const { test } =
+        route.params == null || route.params == undefined ? 0 : route.params;
       setId(test);
       if (test !== undefined) {
         const fetchUserData = async () => {
@@ -42,45 +58,79 @@ const Perfil = ({ usuario }) => {
         fetchUserData();
       }
     }
+  }, []);
 
-  },[]);
-    
+  return (
+    <View>
+      {!usuario ? (
+        <View style={styles.container}>
+          <Text style={styles.label}>Informações do Usuário</Text>
+          <Text>ID:</Text>
+          <Text style={styles.input}> {id} </Text>
+          <Text>Nome:</Text>
+          <Text style={styles.input}> {nome} </Text>
+          <Text>CPF:</Text>
+          <Text style={styles.input}> {cpf} </Text>
+          <Text>Senha:</Text>
+          <Text style={styles.input}> {senha} </Text>
+          <Text>Endereço:</Text>
+          <Text style={styles.input}> {endereco} </Text>
+          <Text>Idade:</Text>
+          <Text style={styles.input}> {idade} </Text>
+          <Text>{dataRegistro}</Text>
+          <Button
+            style={[styles.button, styles.buttonText]}
+            title="Atualizar Informações"
+            onPress={() => handleUserUpdate(navigation)}
+          />
+          <Button
+            mode="contained"
+            title="Excluir conta"
+            color={"red"}
+            style={styles.button}
+            onPress={() => handleDeleteUser()}
+          ></Button>
+          {/* Renderize as informações do usuário aqui */}
+        </View>
+      ) : (
+        <View style={styles.container}>
+          <Text style={styles.label}>Informações do Usuário</Text>
+          <Text>ID:</Text>
+          <Text style={styles.input}> {usuario.id} </Text>
+          <Text>Nome:</Text>
+          <Text style={styles.input}> {usuario.nome} </Text>
+          <Text>CPF:</Text>
+          <Text style={styles.input}> {usuario.cpf} </Text>
+          <Text>Senha:</Text>
+          <Text style={styles.input}> {usuario.senha} </Text>
+          <Text>Endereço:</Text>
+          <Text style={styles.input}> {usuario.endereco} </Text>
+          <Text>Idade:</Text>
+          <Text style={styles.input}> {usuario.idade} </Text>
+          <Text>Data de Registro:</Text>
+          <Text style={styles.input}> {usuario.data_registro} </Text>
+          <Button
+            style={[styles.button, styles.buttonText]}
+            title="Atualizar Informações"
+            onPress={() => handleUserUpdate(navigation)}
+          />
+          <Button
+            mode="contained"
+            title="Excluir conta"
+            color={"red"}
+            style={styles.button}
+            onPress={() => handleDeleteUser()}
+          ></Button>
 
-  return (    
-  <View>
-    {!usuario ? 
-    <View style={styles.container}>
-    <Text style={styles.label}>Informações do Usuário</Text>
-    <Text>ID:</Text><Text style={styles.input}> {id} </Text>
-    <Text>Nome:</Text><Text style={styles.input}> {nome} </Text>
-    <Text>CPF:</Text><Text style={styles.input}> {cpf} </Text>
-    <Text>Senha:</Text><Text style={styles.input}> {senha} </Text>
-    <Text>Endereço:</Text><Text style={styles.input}> {endereco} </Text>
-    <Text>Idade:</Text><Text style={styles.input}> {idade} </Text>
-    <Text>{dataRegistro}</Text>
-    <Button style={[styles.button, styles.buttonText]} title="Atualizar Informações" onPress={() => handleUserUpdate(navigation)} />
-    {/* Renderize as informações do usuário aqui */}
+          {/* Renderize as informações do usuário aqui */}
+        </View>
+      )}
     </View>
-    :
-    <View style={styles.container}>
-    <Text style={styles.label}>Informações do Usuário</Text>
-    <Text>ID:</Text><Text style={styles.input}> { usuario.id} </Text>
-    <Text>Nome:</Text><Text style={styles.input}> {usuario.nome} </Text>
-    <Text>CPF:</Text><Text style={styles.input}> { usuario.cpf} </Text>
-    <Text>Senha:</Text><Text style={styles.input}> {usuario.senha} </Text>
-    <Text>Endereço:</Text><Text style={styles.input}> {usuario.endereco} </Text>
-    <Text>Idade:</Text><Text style={styles.input}> {usuario.idade} </Text>
-    <Text>Data de Registro:</Text><Text style={styles.input}> {usuario.data_registro} </Text>
-    <Button style={[styles.button, styles.buttonText]} title="Atualizar Informações" onPress={() => handleUserUpdate(navigation)} />
-    {/* Renderize as informações do usuário aqui */}
-  </View>}
-  </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-  
     justifyContent: "center",
     alignItems: "center",
   },
@@ -94,7 +144,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingLeft: 10,
     alignItems: "center",
-
   },
 
   button: {
