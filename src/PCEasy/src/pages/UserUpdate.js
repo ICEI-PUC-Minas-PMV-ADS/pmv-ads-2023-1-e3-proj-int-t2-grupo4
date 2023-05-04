@@ -33,7 +33,7 @@ export default function UpdateUser() {
             setEmail(userData.email);
             setEndereco(userData.endereco);
             setDataRegistro(userData.data_registro);
-            setIdade(userData.idade);
+            setIdade(userData.idade.toString());
             setUserData(userData);
         };
         fetchUserData();
@@ -70,7 +70,6 @@ export default function UpdateUser() {
     return (
         <View style={styles.container}>
 
-            <View style={styles.formContainer}>
                 <Text style={styles.label}>Nome:</Text>
                 <TextInput style={styles.input} value={nome} onChangeText={setNome} />
                 <Text style={styles.label}>CPF:</Text>
@@ -104,19 +103,18 @@ export default function UpdateUser() {
                     <Text style={styles.buttonText}>Atualizar Usuário</Text>
                 </TouchableOpacity>
             </View>
-        </View>
     );
 };
 
 const styles = StyleSheet.create({
 
     container: {
-        flex: 1,
+        marginTop: 40,
         justifyContent: "center",
         alignItems: "center",
-    },
+      },
 
-    input: {
+      input: {
         width: "50%",
         height: 40,
         borderRadius: 5,
@@ -125,17 +123,16 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         paddingLeft: 10,
         alignItems: "center",
+      },
 
-    },
-
-    button: {
+      button: {
         backgroundColor: "#4287f5",
         borderRadius: 5,
         padding: 10,
-        width: "100%",
+        width: "50%",
         alignItems: "center",
         marginTop: 10,
-    },
+      },
 
     buttonText: {
         color: "white",

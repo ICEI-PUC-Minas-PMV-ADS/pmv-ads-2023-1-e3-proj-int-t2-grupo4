@@ -131,6 +131,7 @@ const Perfil = ({ usuario }) => {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 40,
     justifyContent: "center",
     alignItems: "center",
   },
