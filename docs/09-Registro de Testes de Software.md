@@ -26,6 +26,8 @@ CT-09 - Informações do Usuário
 
 2- Verificar se todas as informações estão aparecendo(ID, Nome, CPF, Senha, Endereço, Idade, Data de Registro)
 
-3- Verificar se é possivel excluir a conta
+3- Ser possivel excluir a conta 
 
-4- Verificar se é possivel atualizar as informações 
+4- Ser possivel atualizar as informações 
+
+Critérios de Êxito: Todos critérios de êxitos atendidos
