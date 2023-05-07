@@ -21,13 +21,9 @@ const Perfil = ({ usuario }) => {
     else navigation.navigate("UserUpdate", { userId: usuario.id });
   };
 
-  const handleDeleteUser = async () => {
+  const handleDeleteUser = async (userId) => {
     try {
-      if (usuario.id == undefined) {
-        await deleteUser(id);
-      } else {
-        await deleteUser(usuario.id);
-      }
+      await deleteUser(userId);
       LogBox.ignoreLogs([
         "Internal React error: Attempted to capture a commit phase error inside a detached tree",
       ]);
@@ -65,10 +61,10 @@ const Perfil = ({ usuario }) => {
       {!usuario ? (
         <View style={styles.container}>
           <Text style={styles.label}>Informações do Usuário</Text>
-          <Text>ID:</Text>
-          <Text style={styles.input}> {id} </Text>
           <Text>Nome:</Text>
           <Text style={styles.input}> {nome} </Text>
+          <Text>Email:</Text>
+          <Text style={styles.input}> {email} </Text>
           <Text>CPF:</Text>
           <Text style={styles.input}> {cpf} </Text>
           <Text>Senha:</Text>
@@ -84,21 +80,21 @@ const Perfil = ({ usuario }) => {
             onPress={() => handleUserUpdate(navigation)}
           />
           <Button
-            mode="contained"
-            title="Excluir conta"
-            color={"red"}
-            style={styles.button}
-            onPress={() => handleDeleteUser()}
+           mode="contained"
+           title="Excluir conta"
+           color={"red"}
+           style={styles.button}
+           onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
           ></Button>
           {/* Renderize as informações do usuário aqui */}
         </View>
       ) : (
         <View style={styles.container}>
           <Text style={styles.label}>Informações do Usuário</Text>
-          <Text>ID:</Text>
-          <Text style={styles.input}> {usuario.id} </Text>
           <Text>Nome:</Text>
           <Text style={styles.input}> {usuario.nome} </Text>
+          <Text>Email:</Text>
+          <Text style={styles.input}> {usuario.email} </Text>
           <Text>CPF:</Text>
           <Text style={styles.input}> {usuario.cpf} </Text>
           <Text>Senha:</Text>
@@ -115,11 +111,11 @@ const Perfil = ({ usuario }) => {
             onPress={() => handleUserUpdate(navigation)}
           />
           <Button
-            mode="contained"
-            title="Excluir conta"
-            color={"red"}
-            style={styles.button}
-            onPress={() => handleDeleteUser()}
+           mode="contained"
+           title="Excluir conta"
+           color={"red"}
+           style={styles.button}
+           onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
           ></Button>
 
           {/* Renderize as informações do usuário aqui */}
