@@ -53,6 +53,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-06| Mostrar o tempo restante de trabalho e o horário previsto de saída | MÉDIA |
 |RF-07| Histórico dos dias anteriores | MÉDIA |
 |RF-08| Saldo do banco de horas | MÉDIA |
+|RF-09| Informações dos Usuários | MÉDIA |
 
 
 ### Requisitos não Funcionais
