@@ -55,7 +55,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 |Critério de Êxito | - Exibição do banco de horas após login no sistema |
 |  	|  	|
 | **Caso de Teste** 	| **CT-09 – Informações dos Usúarios**	|
-|Requisito Associado | RF-08	- Deve exibir para o usuário o saldo de banco de horas. |
+|Requisito Associado | RF-09	- Deve exibir para o usuário o saldo de banco de horas. |
 | Objetivo do Teste 	| Verificar se aparece as informações do Usuário . |
 | Passos 	| - Fazer o login <br> - Verificar se o aplicativo exibe o todas as informações. |
 |Critério de Êxito | - Exibição das informações |
