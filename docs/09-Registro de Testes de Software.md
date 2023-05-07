@@ -2,6 +2,29 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
 
+CT-01 – Acesso a página "Cadastro"
+
+1- Acessar o aplicativo
+
+2- Clicar em CADASTRE-SE
+
+3- Preencher os campos obrigatórios
+
+4- Clicar em "Cadastrar"
+
+CT-02 – Efetuar login
+
+1- Acessar o aplicativo
+
+2- Clicar no botão de Login
+
+3- Preencher o campo de id
+
+4- Preencher o campo da senha
+
+5- Clicar em "Login"
+
+
 CT-03 – Registrar entrada/saída
 
 
