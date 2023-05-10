@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Menu, Appbar, Provider as PaperProvider } from "react-native-paper";
 import { View, Image, StyleSheet, TouchableOpacity, Text } from "react-native";
-import { SafeAreaProvider } from "react-native-safe-area-context";
 import fingerprint from "../../assets/registro.png";
+import { useNavigation, useRoute } from "@react-navigation/native";
+import { getTimes, register } from "../services/apiServices";
 
 export default PointRegister = () => {
   const [horaAtual, setHoraAtual] = useState(new Date().toLocaleTimeString());
+  const [dataAtual, setDtataAtual] = useState(new Date().toString());
+  const route = useRoute();
+  const userId = route.params.usuario;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -14,8 +18,25 @@ export default PointRegister = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const registroPonto = () => {
-    console.log(`Registro realizado! ${horaAtual}`);
+  const registroPonto = async () => {
+    let idUser = userId.id;
+    let entrada = new Date(horaAtual) < new Date("09:00:00") ? 0 : 1;
+    await register({
+      idUser: 2,
+      data_registro: "12/12/12",
+      entrada: "0",
+    }).then((res) => {
+      if (res) {
+        console.log(res);
+      }
+    });
+
+    await getTimes(userId.id).then((response) => {
+      if (response != null) {
+        console.log(response.data);
+      }
+    });
+    console.log(`Registro realizado! ${(horaAtual, dataAtual)}`);
   };
 
   return (
@@ -25,7 +46,7 @@ export default PointRegister = () => {
       </Appbar.Header>
       <View style={styles.content}>
         <View style={styles.imageContainer}>
-          <TouchableOpacity style={styles.imageWrapper}>
+          <TouchableOpacity onPress={registroPonto} style={styles.imageWrapper}>
             <Image style={styles.logo} source={fingerprint} />
           </TouchableOpacity>
           <Text style={styles.horaAtual}>{horaAtual}</Text>

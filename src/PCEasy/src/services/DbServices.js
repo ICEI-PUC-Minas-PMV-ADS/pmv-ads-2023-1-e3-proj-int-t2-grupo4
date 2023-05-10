@@ -15,6 +15,12 @@ export const Database = {
           endereco TEXT NOT NULL,
           data_registro TEXT NOT NULL,
           idade INTEGER NOT NULL
+        );`,
+        `CREATE TABLE IF NOT EXISTS times ( 
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          idUser INTEGER NOT NULL,
+          data_registro TEXT NOT NULL,
+          entrada BOOLEAN NOT NULL
         );`
       );
     });

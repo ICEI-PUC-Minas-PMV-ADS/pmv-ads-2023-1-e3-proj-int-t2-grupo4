@@ -112,3 +112,28 @@ export const loginUser = async (cpf, senha) => {
     throw error;
   }
 };
+
+export const insertTime = async (param) => {
+  try {
+    let results = await DB_EXEC(
+      `INSERT INTO times (idUser, data_registro, entrada) VALUES (?,?,?)`,
+      [param.idUser, formattedDate, param.entrada]
+    );
+    console.log(results);
+    return results.rowsAffected;
+  } catch (error) {
+    console.error("Erro ao inserir ponto.", error);
+    throw error;
+  }
+};
+
+// Consultando os registros da tabela "times"
+export const queryTimes = async () => {
+  try {
+    let results = await DB_EXEC(`select * from times`);
+    return results.rows._array;
+  } catch (error) {
+    console.error("Erro ao buscar pontos.", error);
+    throw error;
+  }
+};

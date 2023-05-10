@@ -26,6 +26,29 @@
       "email": "carlos.pereira@example.com",
       "endereco": "Praça Central, 789",
       "dataRegistro": "2021-03-10"
+    },
+    {
+      "nome": "Gabriel",
+      "cpf": "123.456.789-00",
+      "senha": "senha123",
+      "email": "gabriel.silva@example.com",
+      "endereco": "Rua das Flores, 123",
+      "dataRegistro": "2021-01-01",
+      "id": 4
+    }
+  ],
+  "times": [
+    {
+      "id": 1,
+      "idUser": "1",
+      "data_registro": "2021-03-10",
+      "entrada": "0"
+    },
+    {
+      "idUser": "2",
+      "data_registro": "2021-03-10",
+      "entrada": "1",
+      "id": 2
     }
   ]
 }

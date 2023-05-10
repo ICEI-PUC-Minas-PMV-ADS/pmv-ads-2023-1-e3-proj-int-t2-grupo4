@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import { insertUser } from "../services/GastosServicesDB";
+import { insertTime, insertUser } from "../services/GastosServicesDB";
 import { useNavigation } from "@react-navigation/native";
 
 export default function AlimentarDB() {
