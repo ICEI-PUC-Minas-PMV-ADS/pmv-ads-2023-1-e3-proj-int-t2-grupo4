@@ -4,6 +4,9 @@
 
 CT-01 – Acesso a página "Cadastro"
 
+
+![cadastro](https://user-images.githubusercontent.com/85715072/236695568-356e20d4-f400-4034-bc0c-48fb83be5b7d.jpg)
+
 1- Acessar o aplicativo
 
 2- Clicar em CADASTRE-SE
@@ -13,6 +16,9 @@ CT-01 – Acesso a página "Cadastro"
 4- Clicar em "Cadastrar"
 
 CT-02 – Efetuar login
+
+
+![Imagem do WhatsApp de 2023-05-05 à(s) 19 15 25](https://user-images.githubusercontent.com/85715072/236695580-dc0acbc5-02c0-44f8-94ae-f0b7a0c3c3a2.jpg)
 
 1- Acessar o aplicativo
 
