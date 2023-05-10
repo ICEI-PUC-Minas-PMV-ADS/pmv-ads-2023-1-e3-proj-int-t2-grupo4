@@ -7,7 +7,8 @@ import Login from "../pages/Login";
 import SplashScreen from "../pages/SplashScreen";
 import PointRegister from "../pages/PointRegister";
 import UserInfo from "../pages/UserInfo";
-import UserUpdate from "../pages/UserUpdate"
+import UserUpdate from "../pages/UserUpdate";
+
 // Restante do código
 
 const Stack = createNativeStackNavigator();

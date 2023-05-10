@@ -1,0 +1,32 @@
+### times
+GET http://localhost:3000/times
+
+
+### CREATE
+POST http://localhost:3000/times
+content-type: application/json
+
+{
+  "idUser": 1,
+  "data_registro": "2021-03-10",
+  "entrada": 0
+}
+
+### UPDATE
+PUT http://localhost:3000/times/3
+content-type: application/json
+
+{
+  "idUser": 1,
+  "data_registro": "2021-03-10",
+  "entrada": 0
+}
+
+
+### GET GASTO
+GET http://localhost:3000/times/3
+
+### DELETE GASTO
+DELETE http://localhost:3000/times/3
+
+

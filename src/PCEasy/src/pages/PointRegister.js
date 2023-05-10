@@ -1,30 +1,47 @@
 import React, { useState, useEffect } from "react";
-import { Menu, Appbar, Provider as PaperProvider } from "react-native-paper";
+import {
+  Menu,
+  Appbar,
+  Provider as PaperProvider,
+  Button,
+} from "react-native-paper";
 import { View, Image, StyleSheet, TouchableOpacity, Text } from "react-native";
 import fingerprint from "../../assets/registro.png";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { getTimes, register } from "../services/apiServices";
 
+import { format } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR";
+
 export default PointRegister = () => {
-  const [horaAtual, setHoraAtual] = useState(new Date().toLocaleTimeString());
-  const [dataAtual, setDtataAtual] = useState(new Date().toString());
+  const navigation = useNavigation();
+  const [horaAtual, setHoraAtual] = useState(format(new Date(), "HH:mm:ss"));
+  const [dataAtual, setDataAtual] = useState(
+    format(new Date(), "EEEE, dd/MM/yyyy 'às' HH:mm:ss", { locale: ptBR })
+  );
+  const [isEntrada, setIsEntrada] = useState(true); // Estado para controlar se é entrada ou saída
+  const [canRegister, setCanRegister] = useState(true); // Estado para controlar se é possível registrar novamente
   const route = useRoute();
   const userId = route.params.usuario;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setHoraAtual(new Date().toLocaleTimeString());
+      setHoraAtual(format(new Date(), "HH:mm:ss"));
     }, 1000);
     return () => clearInterval(intervalId);
   }, []);
 
   const registroPonto = async () => {
+    if (!canRegister) return; // Retorna se não for possível registrar novamente
+
     let idUser = userId.id;
-    let entrada = new Date(horaAtual) < new Date("09:00:00") ? 0 : 1;
+    let entrada = isEntrada ? 0 : 1; // Alternar entre 0 (entrada) e 1 (saída)
+    setIsEntrada(!isEntrada); // Alternar o estado entre entrada e saída
+
     await register({
-      idUser: 2,
-      data_registro: "12/12/12",
-      entrada: "0",
+      idUser: idUser,
+      data_registro: dataAtual,
+      entrada: entrada,
     }).then((res) => {
       if (res) {
         console.log(res);
@@ -36,7 +53,20 @@ export default PointRegister = () => {
         console.log(response.data);
       }
     });
-    console.log(`Registro realizado! ${(horaAtual, dataAtual)}`);
+
+    setCanRegister(false); // Desabilita o registro temporariamente
+
+    setTimeout(() => {
+      setCanRegister(true); // Habilita o registro após 10 segundos
+    }, 10000);
+
+    console.log(
+      `Registro realizado! ${format(
+        new Date(),
+        "EEEE, dd/MM/yyyy 'às' HH:mm:ss",
+        { locale: ptBR }
+      )}`
+    );
   };
 
   return (
@@ -51,6 +81,14 @@ export default PointRegister = () => {
           </TouchableOpacity>
           <Text style={styles.horaAtual}>{horaAtual}</Text>
         </View>
+        <Button
+          color={"#004aad"}
+          style={styles.button}
+          icon="account-clock"
+          mode="contained"
+        >
+          Verificar espelho de ponto
+        </Button>
       </View>
     </View>
   );
@@ -88,8 +126,12 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 32,
     fontWeight: "bold",
-    paddingTop: 20,
+    padding: 14,
     marginTop: 10,
     color: "#202020",
+  },
+  button: {
+    padding: 5,
+    borderRadius: 10,
   },
 });

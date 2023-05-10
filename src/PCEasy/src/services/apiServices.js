@@ -3,9 +3,7 @@ import { BASE_URL } from "./urls";
 
 export const getTimes = async (userId) => {
   try {
-    return await API.get(
-      `https://incongruous-well-fight.glitch.me/src/PCEasy/backend/db.json/times${userId}`
-    ).then(
+    return await API.get(`${BASE_URL}/times/${userId}`).then(
       (response) => {
         return response.data;
       },
@@ -21,10 +19,7 @@ export const getTimes = async (userId) => {
 };
 export const register = async (param) => {
   try {
-    return await API.post(
-      `https://incongruous-well-fight.glitch.me/src/PCEasy/backend/db.json/times`,
-      param
-    ).then(
+    return await API.post(`${BASE_URL}/times`, param).then(
       (response) => {
         return response;
       },
