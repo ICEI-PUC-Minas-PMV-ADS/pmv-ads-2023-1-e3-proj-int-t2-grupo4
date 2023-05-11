@@ -8,6 +8,7 @@ import SplashScreen from "../pages/SplashScreen";
 import PointRegister from "../pages/PointRegister";
 import UserInfo from "../pages/UserInfo";
 import UserUpdate from "../pages/UserUpdate";
+import { Times } from "../pages/Times";
 
 // Restante do código
 
@@ -61,6 +62,13 @@ const Main = () => {
       <Stack.Screen
         name="UserUpdate"
         component={UserUpdate}
+        options={{
+          header: () => null,
+        }}
+      />
+      <Stack.Screen
+        name="Times"
+        component={Times}
         options={{
           header: () => null,
         }}

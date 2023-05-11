@@ -16,7 +16,7 @@ const Home = ({ route }) => {
 
   const renderScene = BottomNavigation.SceneMap({
     pointregister: PointRegister,
-    perfil: () => <Perfil usuario={route.params.usuario} />, // Passe as informações do usuário para a página Perfil
+    perfil: () => <Perfil usuario={route.params.usuario} />,
   });
 
   return (

@@ -17,12 +17,24 @@ export default PointRegister = () => {
   const navigation = useNavigation();
   const [horaAtual, setHoraAtual] = useState(format(new Date(), "HH:mm:ss"));
   const [dataAtual, setDataAtual] = useState(
-    format(new Date(), "EEEE, dd/MM/yyyy 'às' HH:mm:ss", { locale: ptBR })
+    format(new Date(), "dd/MM/yyyy 'às' HH:mm:ss", { locale: ptBR })
   );
   const [isEntrada, setIsEntrada] = useState(true); // Estado para controlar se é entrada ou saída
   const [canRegister, setCanRegister] = useState(true); // Estado para controlar se é possível registrar novamente
   const route = useRoute();
   const userId = route.params.usuario;
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDataAtual(
+        format(new Date(), "dd/MM/yyyy 'às' HH:mm:ss", { locale: ptBR })
+      );
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -50,7 +62,6 @@ export default PointRegister = () => {
 
     await getTimes(userId.id).then((response) => {
       if (response != null) {
-        console.log(response.data);
       }
     });
 
@@ -59,14 +70,6 @@ export default PointRegister = () => {
     setTimeout(() => {
       setCanRegister(true); // Habilita o registro após 10 segundos
     }, 10000);
-
-    console.log(
-      `Registro realizado! ${format(
-        new Date(),
-        "EEEE, dd/MM/yyyy 'às' HH:mm:ss",
-        { locale: ptBR }
-      )}`
-    );
   };
 
   return (
@@ -86,6 +89,9 @@ export default PointRegister = () => {
           style={styles.button}
           icon="account-clock"
           mode="contained"
+          onPress={() => {
+            navigation.navigate("Times", { usuario: userId });
+          }}
         >
           Verificar espelho de ponto
         </Button>
