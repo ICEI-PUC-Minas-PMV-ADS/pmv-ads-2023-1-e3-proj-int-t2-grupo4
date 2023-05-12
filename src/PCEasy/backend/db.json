@@ -40,12 +40,12 @@
   "times": [
     {
       "id": 1,
-      "idUser": "1",
+      "cpf": "1",
       "data_registro": "2021-03-10",
       "entrada": "0"
     },
     {
-      "idUser": "2",
+      "cpf": "2",
       "data_registro": "2021-03-10",
       "entrada": "1",
       "id": 2

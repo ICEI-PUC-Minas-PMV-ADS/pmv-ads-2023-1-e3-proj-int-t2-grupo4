@@ -9,7 +9,7 @@ export const Times = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const userId = route.params?.usuario;
-  const idUser = userId?.id;
+  const idUser = userId?.cpf;
   const [times, setTimes] = useState([]);
 
   useEffect(() => {

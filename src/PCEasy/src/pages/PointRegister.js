@@ -9,7 +9,6 @@ import { View, Image, StyleSheet, TouchableOpacity, Text } from "react-native";
 import fingerprint from "../../assets/registro.png";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { getTimes, register } from "../services/apiServices";
-
 import { format } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 
@@ -46,21 +45,20 @@ export default PointRegister = () => {
   const registroPonto = async () => {
     if (!canRegister) return; // Retorna se não for possível registrar novamente
 
-    let idUser = userId.id;
+    let userCpf = userId.cpf;
     let entrada = isEntrada ? 0 : 1; // Alternar entre 0 (entrada) e 1 (saída)
     setIsEntrada(!isEntrada); // Alternar o estado entre entrada e saída
 
     await register({
-      idUser: idUser,
+      cpf: userCpf,
       data_registro: dataAtual,
       entrada: entrada,
     }).then((res) => {
       if (res) {
-        console.log(res);
       }
     });
 
-    await getTimes(userId.id).then((response) => {
+    await getTimes(userId.cpf).then((response) => {
       if (response != null) {
       }
     });

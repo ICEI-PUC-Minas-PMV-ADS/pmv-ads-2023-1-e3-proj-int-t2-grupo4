@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { deleteUser, getUserById } from "../services/GastosServicesDB";
 import { LogBox } from "react-native";
+import Header from "../components/Header";
+import { TextInput } from "react-native-paper";
 
 const Perfil = ({ usuario }) => {
   const [id, setId] = useState("");
@@ -58,9 +60,11 @@ const Perfil = ({ usuario }) => {
 
   return (
     <View>
+      <Header title={"Perfil"}></Header>
       {!usuario ? (
         <View style={styles.container}>
           <Text style={styles.label}>Informações do Usuário</Text>
+
           <Text>Nome:</Text>
           <Text style={styles.input}> {nome} </Text>
           <Text>Email:</Text>
@@ -80,11 +84,10 @@ const Perfil = ({ usuario }) => {
             onPress={() => handleUserUpdate(navigation)}
           />
           <Button
-           mode="contained"
-           title="Excluir conta"
-           color={"red"}
-           style={styles.button}
-           onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
+            mode="contained"
+            title="Excluir conta"
+            color={"red"}
+            onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
           ></Button>
           {/* Renderize as informações do usuário aqui */}
         </View>
@@ -111,11 +114,11 @@ const Perfil = ({ usuario }) => {
             onPress={() => handleUserUpdate(navigation)}
           />
           <Button
-           mode="contained"
-           title="Excluir conta"
-           color={"red"}
-           style={styles.button}
-           onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
+            mode="contained"
+            title="Atualizar Informações"
+            color={"red"}
+            style={styles.button}
+            onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
           ></Button>
 
           {/* Renderize as informações do usuário aqui */}
@@ -127,30 +130,20 @@ const Perfil = ({ usuario }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
-    justifyContent: "center",
-    alignItems: "center",
+    margin: 15,
   },
 
   input: {
-    width: "50%",
+    width: "100%",
     height: 40,
-    borderRadius: 5,
+    borderRadius: 10,
     borderColor: "gray",
     borderWidth: 1,
     marginBottom: 10,
     paddingLeft: 10,
-    alignItems: "center",
   },
 
-  button: {
-    backgroundColor: "#4287f5",
-    borderRadius: 5,
-    padding: 10,
-    width: "100%",
-    alignItems: "center",
-    marginTop: 10,
-  },
+  button: {},
 
   buttonText: {
     color: "white",
@@ -159,7 +152,7 @@ const styles = StyleSheet.create({
 
   label: {
     fontSize: 20,
-    justifyContent: "center",
+
     fontWeight: "bold",
     marginBottom: 15,
   },

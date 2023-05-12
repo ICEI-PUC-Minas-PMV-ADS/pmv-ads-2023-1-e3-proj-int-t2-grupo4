@@ -3,7 +3,7 @@ import { BASE_URL } from "./urls";
 
 export const getTimes = async (userId) => {
   try {
-    return await API.get(`${BASE_URL}/times/?idUser=${userId}`).then(
+    return await API.get(`${BASE_URL}/times/?cpf=${userId}`).then(
       (response) => {
         return response.data;
       },
