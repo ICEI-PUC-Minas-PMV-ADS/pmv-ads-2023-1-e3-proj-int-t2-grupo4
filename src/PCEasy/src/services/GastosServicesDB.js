@@ -23,6 +23,16 @@ export const getUser = async () => {
   }
 };
 
+export const getUserByCpf = async (cpf) => {
+  try {
+    let results = await DB_EXEC(`select * from users where cpf = ?`, [cpf]);
+    return results.rows.item(0);
+  } catch (error) {
+    console.error("Erro ao buscar cpf:", error);
+    throw error;
+  }
+};
+
 export const insertUser = async (param) => {
   try {
     let results = await DB_EXEC(

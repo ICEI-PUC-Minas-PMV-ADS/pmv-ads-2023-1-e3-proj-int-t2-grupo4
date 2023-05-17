@@ -17,6 +17,7 @@ export const getTimes = async (userId) => {
     return null;
   }
 };
+
 export const register = async (param) => {
   try {
     return await API.post(`${BASE_URL}/times`, param).then(
@@ -31,5 +32,21 @@ export const register = async (param) => {
   } catch (error) {
     console.log(error);
     return null;
+  }
+};
+
+export const checkCpfOnApi = async (cpf) => {
+  try {
+    const times = await getTimes(cpf);
+    if (times && times.length > 0) {
+      // O CPF já foi usado na API
+      return true;
+    } else {
+      // O CPF não foi usado na API
+      return false;
+    }
+  } catch (error) {
+    console.error('Erro ao verificar CPF na API:', error);
+    return false;
   }
 };

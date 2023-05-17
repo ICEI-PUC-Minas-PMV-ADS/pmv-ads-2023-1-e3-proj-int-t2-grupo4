@@ -3,7 +3,6 @@ import { View, Text, TextInput, StyleSheet, Alert } from "react-native";
 import { Button } from "react-native-paper";
 import { loginUser } from "../services/GastosServicesDB"; // Importe sua função loginUser aqui
 import { useNavigation } from "@react-navigation/native"; // Importe o hook useNavigation do React Navigation
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const LoginForm = () => {
   const [user, setUser] = useState("");
@@ -28,6 +27,7 @@ const LoginForm = () => {
       console.error("Erro ao realizar login:", error); // Trate o erro caso ocorra
     }
   };
+
 
   const userType = (userData) => {
     const usuario = JSON.parse(userData, (key, value) => {
