@@ -11,20 +11,25 @@ const LoginForm = () => {
   const navigation = useNavigation(); // Inicialize o hook useNavigation
 
   const handleLogin = async () => {
-    try {
-      // Chame a função loginUser com os dados de CPF e senha inseridos pelo usuário
-      const usuarioLogado = await loginUser(cpf, senha);
+    if (cpf === "admin" && senha === "admin123") {
+      // Dados de login corretos, navegue para a página do administrador
+      navigation.navigate("AdminPage");
+    } else {
+      try {
+        // Chame a função loginUser com os dados de CPF e senha inseridos pelo usuário
+        const usuarioLogado = await loginUser(cpf, senha);
 
-      // Se houver um usuário correspondente, navegue para a página UserInfo com os dados do usuário
-      if (usuarioLogado) {
-        let userData = JSON.stringify(usuarioLogado);
-        userType(userData);
-        navigation.navigate("Home", { usuario: usuarioLogado });
-      } else {
-        Alert.alert("CPF ou senha inválidos."); // Trate o caso de CPF ou senha inválidos
+        // Se houver um usuário correspondente, navegue para a página UserInfo com os dados do usuário
+        if (usuarioLogado) {
+          let userData = JSON.stringify(usuarioLogado);
+          userType(userData);
+          navigation.navigate("Home", { usuario: usuarioLogado });
+        } else {
+          Alert.alert("CPF ou senha inválidos."); // Trate o caso de CPF ou senha inválidos
+        }
+      } catch (error) {
+        console.error("Erro ao realizar login:", error); // Trate o erro caso ocorra
       }
-    } catch (error) {
-      console.error("Erro ao realizar login:", error); // Trate o erro caso ocorra
     }
   };
 

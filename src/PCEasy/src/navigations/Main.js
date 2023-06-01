@@ -9,6 +9,7 @@ import PointRegister from "../pages/PointRegister";
 import UserInfo from "../pages/UserInfo";
 import UserUpdate from "../pages/UserUpdate";
 import { Times } from "../pages/Times";
+import AdminPage from "../pages/AdminPage";
 
 // Restante do código
 
@@ -69,6 +70,13 @@ const Main = () => {
       <Stack.Screen
         name="Times"
         component={Times}
+        options={{
+          header: () => null,
+        }}
+      />
+      <Stack.Screen
+        name="AdminPage"
+        component={AdminPage}
         options={{
           header: () => null,
         }}
