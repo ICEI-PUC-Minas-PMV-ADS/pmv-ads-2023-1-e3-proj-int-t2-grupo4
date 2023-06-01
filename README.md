@@ -23,7 +23,11 @@ O Objetivo Geral do presente trabalho é apresentar uma solução e desenvolver 
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Primeiro passo: baixe o projeto em seu computador, baixe também o Android Studio se quiser rodar o aplicativo no computador, será também necessário a configuração deste aplicativo, para que você possa utilizá-lo. Você pode também rodar a aplicação no seu celular, baixando o aplicativo EXPO GO.
+
+Segundo passo: abra o terminal na pasta "PCEasy" dentro de "src" e execute este comando: npm install, isto fará com que o aplicativo seja instalado no seu computador junto com suas dependências.
+
+Terceiro passo: aqui vamos rodar a aplicação, execute o comando: npx expo start. Se estiver usando o seu celular, apos executar o comando vai aparecer um QR code que pode ser lido dentro do app EXPO GO. Mas se tiver instalado o Android Studio, depois de rodar o comando, apenas aperte a tecla "a" que irá abrir a aplicação.
 
 # Documentação
 
