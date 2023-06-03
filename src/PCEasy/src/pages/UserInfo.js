@@ -4,7 +4,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { deleteUser, getUserById } from "../services/GastosServicesDB";
 import { LogBox } from "react-native";
 import Header from "../components/Header";
-import { TextInput } from "react-native-paper";
+import { TextInput, Appbar } from "react-native-paper";
 
 const Perfil = ({ usuario }) => {
   const [id, setId] = useState("");
@@ -18,6 +18,29 @@ const Perfil = ({ usuario }) => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const navigation = useNavigation();
   const route = useRoute();
+  const [blockNavigation, setBlockNavigation] = useState(true);
+
+  useEffect(() => {
+    const onBeforeRemove = (e) => {
+      if (blockNavigation) {
+        e.preventDefault();
+      }
+    };
+
+    navigation.addListener("beforeRemove", onBeforeRemove);
+
+    return () => {
+      navigation.removeListener("beforeRemove", onBeforeRemove);
+    };
+  }, [blockNavigation, navigation]);
+
+  const handleLogout = () => {
+    setBlockNavigation(false); // Permite a navegação para a tela de login
+    LogBox.ignoreLogs([
+      "Internal React error: Attempted to capture a commit phase error inside a detached tree",
+    ]);
+    navigation.navigate("Login");
+  };
 
   const handleUserUpdate = (navigation) => {
     if (!usuario) navigation.navigate("UserUpdate", { userId: id });
@@ -61,7 +84,10 @@ const Perfil = ({ usuario }) => {
 
   return (
     <View>
-      <Header title={"Perfil"}></Header>
+      <Header title={"Perfil"}>
+        <Appbar.Action icon="logout" onPress={handleLogout} />
+      </Header>
+
       {!usuario ? (
         <View style={styles.container}>
           <Text style={styles.label}>Informações do Usuário</Text>

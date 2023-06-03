@@ -7,7 +7,11 @@ import {
 } from "react-native-paper";
 import { View, Image, StyleSheet, TouchableOpacity, Text } from "react-native";
 import fingerprint from "../../assets/registro.png";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import {
+  useNavigation,
+  useRoute,
+  useFocusEffect,
+} from "@react-navigation/native";
 import { getTimes, register } from "../services/apiServices";
 import { format } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
@@ -23,6 +27,26 @@ export default PointRegister = () => {
   const [lastTime, setLastTime] = useState(null); // Estado para armazenar o último registro
   const route = useRoute();
   const userId = route.params.usuario;
+  const [blockNavigation, setBlockNavigation] = useState(true);
+
+  // useEffect(() => {
+  //   const onBeforeRemove = (e) => {
+  //     if (blockNavigation) {
+  //       e.preventDefault();
+  //     }
+  //   };
+
+  //   navigation.addListener("beforeRemove", onBeforeRemove);
+
+  //   return () => {
+  //     navigation.removeListener("beforeRemove", onBeforeRemove);
+  //   };
+  // }, [blockNavigation, navigation]);
+
+  // const handleLogout = () => {
+  //   setBlockNavigation(false); // Permite a navegação para a tela de login
+  //   navigation.navigate("Login");
+  // };
 
   useEffect(() => {
     const timer = setInterval(() => {
