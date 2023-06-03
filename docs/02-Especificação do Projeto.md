@@ -48,11 +48,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-01| Efetuar cadastro | ALTA |
 |RF-02| Efetuar login | ALTA |
 |RF-03| Registrar entrada/saída | ALTA |
-|RF-04| Mostrar o horário registrado | ALTA |
-|RF-05| Mostrar o tempo que se passou desde a entrada no sistema | MÉDIA |
-|RF-06| Mostrar o tempo restante de trabalho e o horário previsto de saída | MÉDIA |
+|RF-04| Mostrar o horário registrado ENTRADA/SAÍDA | ALTA |
+|RF-05| Editar as informações do Usuário | MÉDIA |
+|RF-06| Impossibilitar a existência de CPF duplicado | MÉDIA |
 |RF-07| Histórico dos dias anteriores | MÉDIA |
-|RF-08| Saldo do banco de horas | MÉDIA |
+|RF-08| Impossibilitar um CPF com mais de 11 digitos | MÉDIA |
 |RF-09| Informações dos Usuários | MÉDIA |
 
 
