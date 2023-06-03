@@ -20,6 +20,7 @@ export default PointRegister = () => {
   );
   const [isEntrada, setIsEntrada] = useState(true); // Estado para controlar se é entrada ou saída
   const [canRegister, setCanRegister] = useState(true); // Estado para controlar se é possível registrar novamente
+  const [lastTime, setLastTime] = useState(null); // Estado para armazenar o último registro
   const route = useRoute();
   const userId = route.params.usuario;
 
@@ -42,6 +43,17 @@ export default PointRegister = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    const fetchLastTime = async () => {
+      const response = await getTimes(userId.cpf);
+      if (response && response.length > 0) {
+        setLastTime(response[response.length - 1]);
+      }
+    };
+
+    fetchLastTime();
+  }, [userId]);
+
   const registroPonto = async () => {
     if (!canRegister) return; // Retorna se não for possível registrar novamente
 
@@ -55,11 +67,17 @@ export default PointRegister = () => {
       entrada: entrada,
     }).then((res) => {
       if (res) {
+        setLastTime({
+          cpf: userCpf,
+          data_registro: dataAtual,
+          entrada: entrada,
+        });
       }
     });
 
     await getTimes(userId.cpf).then((response) => {
       if (response != null) {
+        setLastTime(response[response.length - 1]);
       }
     });
 
@@ -93,6 +111,17 @@ export default PointRegister = () => {
         >
           Verificar espelho de ponto
         </Button>
+        {lastTime && (
+          <View style={styles.lastTimeContainer}>
+            <Text style={styles.lastTimeTitle}>Último registro:</Text>
+            <Text style={styles.lastTimeText}>
+              Data: {lastTime.data_registro}
+            </Text>
+            <Text style={styles.lastTimeText}>
+              {lastTime.entrada === 0 ? "Entrada" : "Saída"}
+            </Text>
+          </View>
+        )}
       </View>
     </View>
   );
@@ -137,5 +166,17 @@ export const styles = StyleSheet.create({
   button: {
     padding: 5,
     borderRadius: 10,
+  },
+  lastTimeContainer: {
+    marginTop: 20,
+    alignItems: "center",
+  },
+  lastTimeTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  lastTimeText: {
+    marginTop: 5,
+    fontSize: 16,
   },
 });

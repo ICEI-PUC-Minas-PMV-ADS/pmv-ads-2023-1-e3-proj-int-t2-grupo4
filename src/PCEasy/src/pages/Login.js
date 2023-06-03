@@ -5,7 +5,7 @@ import { loginUser } from "../services/GastosServicesDB"; // Importe sua funçã
 import { useNavigation } from "@react-navigation/native"; // Importe o hook useNavigation do React Navigation
 
 const LoginForm = () => {
-  const [ setUser ] = useState("");
+  const [user, setUser] = useState(""); // Correção na desestruturação
   const [cpf, setCpf] = useState("");
   const [senha, setSenha] = useState("");
   const navigation = useNavigation(); // Inicialize o hook useNavigation
@@ -18,7 +18,7 @@ const LoginForm = () => {
       try {
         // Chame a função loginUser com os dados de CPF e senha inseridos pelo usuário
         const usuarioLogado = await loginUser(cpf, senha);
-  
+
         // Se houver um usuário correspondente, navegue para a página UserInfo com os dados do usuário
         if (usuarioLogado) {
           let userData = JSON.stringify(usuarioLogado);
@@ -32,7 +32,6 @@ const LoginForm = () => {
       }
     }
   };
-
 
   const userType = (userData) => {
     const usuario = JSON.parse(userData, (key, value) => {

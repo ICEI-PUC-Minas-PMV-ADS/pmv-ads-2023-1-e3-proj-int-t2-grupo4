@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, Text, Button, StyleSheet, Modal } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { deleteUser, getUserById } from "../services/GastosServicesDB";
 import { LogBox } from "react-native";
@@ -15,6 +15,7 @@ const Perfil = ({ usuario }) => {
   const [dataRegistro, setDataRegistro] = useState("");
   const [endereco, setEndereco] = useState("");
   const [idade, setIdade] = useState("");
+  const [showConfirmation, setShowConfirmation] = useState(false);
   const navigation = useNavigation();
   const route = useRoute();
 
@@ -87,9 +88,8 @@ const Perfil = ({ usuario }) => {
             mode="contained"
             title="Excluir conta"
             color={"red"}
-            onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
+            onPress={() => setShowConfirmation(true)}
           ></Button>
-          {/* Renderize as informações do usuário aqui */}
         </View>
       ) : (
         <View style={styles.container}>
@@ -115,15 +115,32 @@ const Perfil = ({ usuario }) => {
           />
           <Button
             mode="contained"
-            title="Atualizar Informações"
+            title="Excluir conta"
             color={"red"}
             style={styles.button}
-            onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
+            onPress={() => setShowConfirmation(true)}
           ></Button>
-
-          {/* Renderize as informações do usuário aqui */}
         </View>
       )}
+
+      {/* Confirmation Dialog */}
+      <Modal visible={showConfirmation} transparent={true} animationType="fade">
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <Text style={styles.confirmationText}>
+              Deseja mesmo deletar a conta?
+            </Text>
+            <View style={styles.modalButtons}>
+              <Button
+                title="Sim"
+                color="red"
+                onPress={() => handleDeleteUser(usuario ? usuario.id : id)}
+              />
+              <Button title="Não" onPress={() => setShowConfirmation(false)} />
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 };
@@ -132,7 +149,6 @@ const styles = StyleSheet.create({
   container: {
     margin: 15,
   },
-
   input: {
     width: "100%",
     height: 40,
@@ -142,19 +158,35 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingLeft: 10,
   },
-
   button: {},
-
   buttonText: {
     color: "white",
     fontWeight: "bold",
   },
-
   label: {
     fontSize: 20,
-
     fontWeight: "bold",
     marginBottom: 15,
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+  },
+  modalContent: {
+    backgroundColor: "white",
+    padding: 20,
+    borderRadius: 10,
+  },
+  confirmationText: {
+    fontSize: 18,
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  modalButtons: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
 
