@@ -12,6 +12,7 @@ import { insertUser, getUserByCpf } from "../services/GastosServicesDB";
 import { useNavigation } from "@react-navigation/native";
 import { checkCpfOnApi } from "../services/apiServices";
 
+
 export default function AlimentarDB() {
   const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
@@ -62,7 +63,7 @@ export default function AlimentarDB() {
 
       if (result > 0) {
         Alert.alert("Sucesso", "Dados inseridos com sucesso!", [
-          { text: "OK", onPress: () => navigation.goBack() },
+          { text: "OK", onPress: () => navigation.navigate("Login") },
         ]);
         // Limpar os campos do formulário após a inserção
         setNome("");

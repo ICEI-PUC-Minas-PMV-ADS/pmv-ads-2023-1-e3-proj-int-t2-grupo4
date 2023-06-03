@@ -9,7 +9,8 @@ import PointRegister from "../pages/PointRegister";
 import UserInfo from "../pages/UserInfo";
 import UserUpdate from "../pages/UserUpdate";
 import { Times } from "../pages/Times";
-import AdminPage from "../pages/AdminPage";
+import PesquisaUsuario from "../pages/PesquisaUsuario";
+import HomeAdmin from "../pages/HomeAdmin";
 
 // Restante do código
 
@@ -75,8 +76,15 @@ const Main = () => {
         }}
       />
       <Stack.Screen
-        name="AdminPage"
-        component={AdminPage}
+        name="PesquisaUsuario"
+        component={PesquisaUsuario}
+        options={{
+          header: () => null,
+        }}
+      />
+      <Stack.Screen
+        name="HomeAdmin"
+        component={HomeAdmin}
         options={{
           header: () => null,
         }}

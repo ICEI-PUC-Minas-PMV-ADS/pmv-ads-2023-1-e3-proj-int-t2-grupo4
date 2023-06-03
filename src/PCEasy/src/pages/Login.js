@@ -5,7 +5,7 @@ import { loginUser } from "../services/GastosServicesDB"; // Importe sua funçã
 import { useNavigation } from "@react-navigation/native"; // Importe o hook useNavigation do React Navigation
 
 const LoginForm = () => {
-  const [user, setUser] = useState("");
+  const [ setUser ] = useState("");
   const [cpf, setCpf] = useState("");
   const [senha, setSenha] = useState("");
   const navigation = useNavigation(); // Inicialize o hook useNavigation
@@ -13,12 +13,12 @@ const LoginForm = () => {
   const handleLogin = async () => {
     if (cpf === "admin" && senha === "admin123") {
       // Dados de login corretos, navegue para a página do administrador
-      navigation.navigate("AdminPage");
+      navigation.navigate("HomeAdmin");
     } else {
       try {
         // Chame a função loginUser com os dados de CPF e senha inseridos pelo usuário
         const usuarioLogado = await loginUser(cpf, senha);
-
+  
         // Se houver um usuário correspondente, navegue para a página UserInfo com os dados do usuário
         if (usuarioLogado) {
           let userData = JSON.stringify(usuarioLogado);
@@ -67,10 +67,6 @@ const LoginForm = () => {
     setUser(usuarioTipado.id);
   };
 
-  const handleRegister = (navigation) => {
-    navigation.navigate("UserRegister");
-  };
-
   return (
     <View style={styles.container}>
       <View style={styles.formContainer}>
@@ -95,14 +91,6 @@ const LoginForm = () => {
           onPress={handleLogin}
         >
           Login
-        </Button>
-        <Button
-          mode="contained"
-          style={styles.buttons}
-          labelStyle={styles.buttonText}
-          onPress={() => handleRegister(navigation)}
-        >
-          Cadastre-se
         </Button>
       </View>
     </View>

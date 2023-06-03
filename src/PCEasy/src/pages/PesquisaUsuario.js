@@ -2,25 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Appbar, Button, Searchbar } from "react-native-paper";
 import { View, StyleSheet, FlatList, Text } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { getUserByCpf, getUser, deleteUser } from "../services/GastosServicesDB";
+import { getUserByCpf, getUser, deleteUser as deleteUserData } from "../services/GastosServicesDB";
 import { IconButton } from "react-native-paper";
 
-const AdminPage = () => {
+const PesquisaUsuario = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [users, setUsers] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-
-    const deleteUser = async (id) => {
-      try {
-        await deleteUser(id);
-        fetchUsers();
-      } catch (error) {
-        console.error("Erro ao excluir usuário:", error);
-      }
-    };
-
     const fetchUsers = async () => {
       try {
         const allUsers = await getUser();
@@ -47,6 +37,24 @@ const AdminPage = () => {
     }
   };
 
+  const handleDeleteUser = async (id) => {
+    try {
+      await deleteUserData(id);
+      fetchUsers();
+    } catch (error) {
+      console.error("Erro ao excluir usuário:", error);
+    }
+  };
+
+  const fetchUsers = async () => {
+    try {
+      const allUsers = await getUser();
+      setUsers(allUsers);
+    } catch (error) {
+      console.error("Erro ao buscar usuários:", error);
+    }
+  };
+
   const renderItem = ({ item }) => (
     <View style={styles.userItem}>
       <View>
@@ -55,10 +63,11 @@ const AdminPage = () => {
         <Text>{`Email: ${item.email}`}</Text>
         {/* Exiba os outros campos do usuário conforme necessário */}
       </View>
-      <IconButton style={styles.deleteButton}
+      <IconButton
+        style={styles.deleteButton}
         icon="delete"
         color="#FF0000"
-        onPress={() => deleteUser(item.id)}
+        onPress={() => handleDeleteUser(item.id)}
       />
     </View>
   );
@@ -113,7 +122,7 @@ const AdminPage = () => {
   );
 };
 
-export default AdminPage;
+export default PesquisaUsuario;
 
 const styles = StyleSheet.create({
   container: {
@@ -160,5 +169,4 @@ const styles = StyleSheet.create({
   deleteButton: {
     marginLeft: 150,
   }
-
 });
