@@ -2,7 +2,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
 
-CT-01 – Acesso a página "Cadastro"
+## CT-01 – Acesso a página "Cadastro"
 
 
 ![cadastro](https://user-images.githubusercontent.com/85715072/236695568-356e20d4-f400-4034-bc0c-48fb83be5b7d.jpg)
@@ -15,7 +15,8 @@ CT-01 – Acesso a página "Cadastro"
 
 4- Clicar em "Cadastrar"
 
-CT-02 – Efetuar login
+
+## CT-02 – Efetuar login
 
 
 ![Imagem do WhatsApp de 2023-05-05 à(s) 19 15 25](https://user-images.githubusercontent.com/85715072/236695580-dc0acbc5-02c0-44f8-94ae-f0b7a0c3c3a2.jpg)
@@ -31,7 +32,7 @@ CT-02 – Efetuar login
 5- Clicar em "Login"
 
 
-CT-03 – Registrar entrada/saída
+## CT-03 – Registrar entrada/saída
 
 
 ![Imagem do WhatsApp de 2023-05-05 à(s) 19 15 23](https://user-images.githubusercontent.com/103431710/236578880-66284839-4bbb-45e9-a917-7449730ecbff.jpg)
@@ -45,7 +46,7 @@ CT-03 – Registrar entrada/saída
 Critérios de Êxito: Todos critérios de êxitos atendidos
 
 
-CT-04 – Mostrar o horário registrado
+## CT-04 – Mostrar o horário registrado
 
 
 ![horarioregistrado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/6740d569-5244-455a-8a17-98a57220d5c2)
@@ -59,7 +60,7 @@ CT-04 – Mostrar o horário registrado
 Critérios de Êxito: Todos critérios de êxitos atendidos
 
 
-CT-05 – Editar as informações do Usuário
+## CT-05 – Editar as informações do Usuário
 
 
 ![popupdeatualizacao](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/b09929f7-d976-40f9-8228-2ed340d7459c)
@@ -76,7 +77,8 @@ CT-05 – Editar as informações do Usuário
 
 Critérios de Êxito: Todos critérios de êxitos atendidos
 
-CT-06 – Impossibilitar a existência de CPF duplicado
+
+## CT-06 – Impossibilitar a existência de CPF duplicado
 
 
 ![cpfduplicado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/b37bdbf0-66e5-48d1-a621-673056e8f562)
@@ -89,7 +91,10 @@ CT-06 – Impossibilitar a existência de CPF duplicado
 
 4- Salvar.
 
-CT-07 – Histórico dos dias anteriores
+Critérios de Êxito: Todos critérios de êxitos atendidos
+
+
+## CT-07 – Histórico dos dias anteriores
 
 
 ![horarioregistrado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/b81e1695-76f7-4321-8e62-c60b5801d79f)
@@ -100,7 +105,10 @@ CT-07 – Histórico dos dias anteriores
 
 3- Verificar se o aplicativo exibe o histórico dos registros.
 
-CT-08 – Impossibilitar um CPF com mais de 11 digitos
+Critérios de Êxito: Todos critérios de êxitos atendidos
+
+
+## CT-08 – Impossibilitar um CPF com mais de 11 digitos
 
 
 ![cpfcom11digitos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/c987402c-ada2-4595-a36d-26f10d22eea7)
@@ -113,7 +121,10 @@ CT-08 – Impossibilitar um CPF com mais de 11 digitos
 
 4- Salvar.
 
-CT-09 - Informações do Usuário 
+Critérios de Êxito: Todos critérios de êxitos atendidos
+
+
+## CT-09 - Informações do Usuário 
 
 
 ![Imagem do WhatsApp de 2023-05-05 à(s) 19 15 23](https://user-images.githubusercontent.com/103431710/236580434-23b970f0-4916-4a34-a741-46db89c856c1.jpg)
