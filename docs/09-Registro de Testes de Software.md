@@ -35,7 +35,8 @@
 ## CT-03 – Registrar entrada/saída
 
 
-![Imagem do WhatsApp de 2023-05-05 à(s) 19 15 23](https://user-images.githubusercontent.com/103431710/236578880-66284839-4bbb-45e9-a917-7449730ecbff.jpg)
+
+![img1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/103431710/01d7e306-e915-4471-b959-47cede34e482)
 
 1- Acessar o Aplicativo
 
