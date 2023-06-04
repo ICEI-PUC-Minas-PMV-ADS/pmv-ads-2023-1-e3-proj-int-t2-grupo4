@@ -35,6 +35,7 @@ Processo de atualização dos dados cadastrados:
 
 Dados de cadastro atualizados:
 
+![popupdeatualizacao](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/aef66025-ba50-4483-be28-70548bb4adb8)
 ![infoatualizadadousuario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/563127c5-f76a-4aad-8233-85d170aa228c)
 
 Deletar uma conta:
@@ -55,7 +56,22 @@ A Tela "Login" possui dois campos para que o funcionario utlize o Nº do funcion
 
 ### Teste de Funcionalidades:
 
+Login como administrador:
 
+![loginadmin](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/5980b247-b451-4ade-b72a-19270605d03a)
+
+Login como administrador depois de realizar o cadastro de um usuário:
+
+![admincompessoasalva](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/36b8b884-2360-4f2b-948d-d0def27eeb08)
+
+Login como usuário:
+
+![loginpreenchido](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/a4a2e17f-93ac-4d1c-9ad1-dc4ed1b8cdc5)
+![loginerrado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/fd74694a-23e1-4e96-9a12-107ff10df8d5)
+
+Após realizar o login:
+
+![logincomousuario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/3c81968e-a8d3-49de-b26c-7d107f502350)
 
 ## Marcação de Ponto
 
