@@ -85,12 +85,16 @@ A Tela "Marcação de Ponto" possui um widget onde o usuário irá pressionar o 
 <li>RF-04 - Mostrar o horário registrado</li>
 </ul>
 
+Tela de marcação de ponto mostrando o último registro feito:
+![img3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/103431710/fff31562-0232-493c-ad49-2f7bce834440)
+
+
 
 ## Página de Registros Realizados
 
 A Tela "Registros Realizados" é uma página onde consta todos os registros feitos através do aplicativo.
 
-![marcacoes](./img/marcacoes.png)
+![img2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/103431710/ef9cd0b2-e62b-4949-8e3e-0a2b9a8953d6)
 
 ### Requisitos atendidos:
 <ul>
@@ -98,4 +102,12 @@ A Tela "Registros Realizados" é uma página onde consta todos os registros feit
 <li>RF-06 - Mostrar o tempo restante de trabalho e o horário previsto de saída</li>
 <li>RF-07 - Histórico dos dias anteriores</li>
 <li>RF-08 - Saldo do banco de horas</li>
-</ul>
+  </ul>
+  
+  Tela quando ainda não feito nenhum registro:
+ ![img4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/103431710/45d73cde-b9a8-41b7-9c31-7381dad30ff8)
+
+  
+
+
+
