@@ -11,6 +11,7 @@ import {
 import { insertUser, getUserByCpf } from "../services/GastosServicesDB";
 import { useNavigation } from "@react-navigation/native";
 import { checkCpfOnApi } from "../services/apiServices";
+import { LogBox } from "react-native";
 
 
 export default function AlimentarDB() {
@@ -62,6 +63,9 @@ export default function AlimentarDB() {
       });
 
       if (result > 0) {
+        LogBox.ignoreLogs([
+          "Internal React error: Attempted to capture a commit phase error inside a detached tree",
+        ]);
         Alert.alert("Sucesso", "Dados inseridos com sucesso!", [
           { text: "OK", onPress: () => navigation.navigate("Login") },
         ]);

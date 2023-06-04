@@ -30,17 +30,17 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Passos 	| - Fazer o login <br> - Clicar na opção ENTRADA <br> - Verificar o horário exibido na tela <br> - Clicar na opção SAIDA <br> - Verificar o horário exibido na tela |
 |Critério de Êxito | - Exibição correta do último registro do dia seja de entrada ou saída |
 |  	|  	|
-| **Caso de Teste** 	| **CT-05 – Mostrar o tempo que se passou desde a entrada no sistema**	|
-|Requisito Associado | RF-05	- Deve disponibilizar ao usuário cronômetro medindo o tempo desde sua última entrada no sistema. |
-| Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente o cronômetro do tempo de entrada no sistema. |
-| Passos 	| - Fazer o login <br> - Clicar na opção ENTRADA <br> - Verificar se o aplicativo exibe o cronômetro. |
-|Critério de Êxito | - Exibição do cronômetro após entrada no sistema |
+| **Caso de Teste** 	| **CT-05 – Editar as informações do Usuário**	|
+|Requisito Associado | RF-05	- Deve possibilitar que o usuário possa realizar atualizações em suas informações pessoais. |
+| Objetivo do Teste 	| Verificar se o aplicativo fornece a possibilidade de alteração de informações. |
+| Passos 	| - Fazer o login <br> - Clicar na opção PERFIL <br> - Clicar na opção ATUALIZAR INFORMAÇÕES <br> - Atualizar informações <br> - Salvar . |
+|Critério de Êxito | - Informações atualizadas. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-06 – Mostrar o tempo restante de trabalho e o horário previsto de saída**	|
-|Requisito Associado | RF-06	- Deve exibir o horário previsto de saída e o tempo decorrido após última entrada no dia. |
-| Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente o horário de saida do usuário. |
-| Passos 	| - Fazer o login <br> - Clicar na opção ENTRADA <br> - Verificar se o aplicativo exibe o horário de saída. |
-|Critério de Êxito | - Exibição do horário de saída após entrada no sistema. |
+| **Caso de Teste** 	| **CT-06 – Impossibilitar a existência de CPF duplicado**	|
+|Requisito Associado | RF-06	- Deve impossibilitar que existam dois CPF iguais cadastrados no sistema. |
+| Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente uma mensagem de erro ao duplikcar um CPF. |
+| Passos 	| - Fazer o login como administrador <br> - Clicar na opção REGISTRAR USUÁRIO <br> - Preencher os campos com o CPF duplicado <br> - Salvar. |
+|Critério de Êxito | - Exibição de uma mensagem de erro. |
 |  	|  	|
 | **Caso de Teste** 	| **CT-07 – Histórico dos dias anteriores**	|
 |Requisito Associado | RF-07	- O aplicativo deve ter opção com histórico dos registros efetuados anteriormente. |
@@ -48,11 +48,11 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Passos 	| - Fazer o login <br> - Clicar na opção HISTÓRICO <br> - Verificar se o aplicativo exibe o histórico dos registros. |
 |Critério de Êxito | - Exibição do histórico dos registros sistema |
 |  	|  	|
-| **Caso de Teste** 	| **CT-08 – Saldo do banco de horas**	|
-|Requisito Associado | RF-08	- Deve exibir para o usuário o saldo de banco de horas. |
-| Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente o saldo do banco de horas do usuário. |
-| Passos 	| - Fazer o login <br> - Verificar se o aplicativo exibe o saldo do banco de horas. |
-|Critério de Êxito | - Exibição do banco de horas após login no sistema |
+| **Caso de Teste** 	| **CT-08 – Impossibilitar um CPF com mais de 11 digitos**	|
+|Requisito Associado | RF-08	- O aplicativo não pode permitir um cadastro de um CPF com mais de 11 digitos. |
+| Objetivo do Teste 	| Verificar se o aplicativo exibe corretamente uma mensagem de erro ao cadastrar um CPF inválido. |
+| Passos 	| - Fazer o login como administrador <br> - Clicar na opção REGISTRAR USUÁRIO <br> - Preencher os campos com o CPF que contenha mais de 11 digitos <br> - Salvar. |
+|Critério de Êxito | - Deve exibir para o administrador uma mensagem de erro. |
 |  	|  	|
 | **Caso de Teste** 	| **CT-09 – Informações dos Usúarios**	|
 |Requisito Associado | RF-09	- Deve exibir para o usuário o saldo de banco de horas. |

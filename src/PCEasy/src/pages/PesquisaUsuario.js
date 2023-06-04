@@ -4,11 +4,14 @@ import { View, StyleSheet, FlatList, Text } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { getUserByCpf, getUser, deleteUser as deleteUserData } from "../services/GastosServicesDB";
 import { IconButton } from "react-native-paper";
+import { LogBox } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const PesquisaUsuario = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [users, setUsers] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
+  const navigation = useNavigation();
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -22,6 +25,13 @@ const PesquisaUsuario = () => {
 
     fetchUsers();
   }, []);
+
+  const handleLogout = () => {
+    LogBox.ignoreLogs([
+      "Internal React error: Attempted to capture a commit phase error inside a detached tree",
+    ]);
+    navigation.navigate("Login");
+  };
 
   const handleSearch = async () => {
     try {
@@ -94,8 +104,10 @@ const PesquisaUsuario = () => {
 
   return (
     <View style={styles.container}>
+      
       <Appbar.Header style={styles.appbarHeader}>
         <Appbar.Content title="Tela Administrativa" />
+        <Appbar.Action icon="logout" onPress={handleLogout} />
       </Appbar.Header>
       <View style={styles.content}>
         <View style={styles.searchContainer}>
