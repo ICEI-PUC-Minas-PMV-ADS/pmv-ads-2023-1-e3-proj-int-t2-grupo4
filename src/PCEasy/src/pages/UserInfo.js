@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Button, StyleSheet, Modal } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  Modal,
+  BackHandler,
+} from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { deleteUser, getUserById } from "../services/GastosServicesDB";
 import { LogBox } from "react-native";
@@ -20,19 +27,19 @@ const Perfil = ({ usuario }) => {
   const route = useRoute();
   const [blockNavigation, setBlockNavigation] = useState(true);
 
-  useEffect(() => {
-    const onBeforeRemove = (e) => {
-      if (blockNavigation) {
-        e.preventDefault();
-      }
-    };
+  // useEffect(() => {
+  //   const onBeforeRemove = (e) => {
+  //     if (blockNavigation) {
+  //       e.preventDefault();
+  //     }
+  //   };
 
-    navigation.addListener("beforeRemove", onBeforeRemove);
+  //   navigation.addListener("beforeRemove", onBeforeRemove);
 
-    return () => {
-      navigation.removeListener("beforeRemove", onBeforeRemove);
-    };
-  }, [blockNavigation, navigation]);
+  //   return () => {
+  //     navigation.removeListener("beforeRemove", onBeforeRemove);
+  //   };
+  // }, [blockNavigation, navigation]);
 
   const handleLogout = () => {
     setBlockNavigation(false); // Permite a navegação para a tela de login
@@ -81,6 +88,29 @@ const Perfil = ({ usuario }) => {
       }
     }
   }, []);
+
+  // useEffect(() => {
+  //   const backHandler = BackHandler.addEventListener(
+  //     "hardwareBackPress",
+  //     handleBackPress
+  //   );
+
+  //   return () => backHandler.remove();
+  // }, []);
+
+  // const handleBackPress = () => {
+  //   return true; // Bloqueia o botão de voltar físico do dispositivo
+  // };
+
+  // useEffect(() => {
+  //   navigation.setOptions({
+  //     headerLeft: () => (
+  //       <Appbar.BackAction
+  //         onPress={() => navigation.navigate("PointRegister")}
+  //       />
+  //     ),
+  //   });
+  // }, []);
 
   return (
     <View>

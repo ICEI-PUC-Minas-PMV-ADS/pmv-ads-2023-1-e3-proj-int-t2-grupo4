@@ -5,7 +5,14 @@ import {
   Provider as PaperProvider,
   Button,
 } from "react-native-paper";
-import { View, Image, StyleSheet, TouchableOpacity, Text } from "react-native";
+import {
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  BackHandler,
+} from "react-native";
 import fingerprint from "../../assets/registro.png";
 import {
   useNavigation,
@@ -28,25 +35,7 @@ export default PointRegister = () => {
   const route = useRoute();
   const userId = route.params.usuario;
   const [blockNavigation, setBlockNavigation] = useState(true);
-
-  // useEffect(() => {
-  //   const onBeforeRemove = (e) => {
-  //     if (blockNavigation) {
-  //       e.preventDefault();
-  //     }
-  //   };
-
-  //   navigation.addListener("beforeRemove", onBeforeRemove);
-
-  //   return () => {
-  //     navigation.removeListener("beforeRemove", onBeforeRemove);
-  //   };
-  // }, [blockNavigation, navigation]);
-
-  // const handleLogout = () => {
-  //   setBlockNavigation(false); // Permite a navegação para a tela de login
-  //   navigation.navigate("Login");
-  // };
+  const [ultimaOcorrencia, setUltimaOcorrencia] = useState(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -72,6 +61,9 @@ export default PointRegister = () => {
       const response = await getTimes(userId.cpf);
       if (response && response.length > 0) {
         setLastTime(response[response.length - 1]);
+        setUltimaOcorrencia(
+          response[response.length - 1].entrada === 0 ? "Entrada" : "Saída"
+        );
       }
     };
 
@@ -79,22 +71,22 @@ export default PointRegister = () => {
   }, [userId]);
 
   const registroPonto = async () => {
-    if (!canRegister) return; // Retorna se não for possível registrar novamente
+    if (!canRegister) return;
 
     let userCpf = userId.cpf;
-    let entrada = isEntrada ? 0 : 1; // Alternar entre 0 (entrada) e 1 (saída)
-    setIsEntrada(!isEntrada); // Alternar o estado entre entrada e saída
+    let entrada = ultimaOcorrencia === "Entrada" ? 1 : 0;
+    setUltimaOcorrencia(entrada === 0 ? "Entrada" : "Saída");
 
     await register({
       cpf: userCpf,
       data_registro: dataAtual,
       entrada: entrada,
-    }).then((res) => {
+    }).then(async (res) => {
       if (res) {
-        setLastTime({
-          cpf: userCpf,
-          data_registro: dataAtual,
-          entrada: entrada,
+        await getTimes(userId.cpf).then((response) => {
+          if (response != null) {
+            setLastTime(response[response.length - 1]);
+          }
         });
       }
     });
@@ -105,12 +97,31 @@ export default PointRegister = () => {
       }
     });
 
-    setCanRegister(false); // Desabilita o registro temporariamente
+    setCanRegister(false);
 
     setTimeout(() => {
-      setCanRegister(true); // Habilita o registro após 10 segundos
+      setCanRegister(true);
     }, 10000);
   };
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      handleBackPress
+    );
+
+    return () => backHandler.remove();
+  }, []);
+
+  const handleBackPress = () => {
+    if (navigation.isFocused()) {
+      // Verifica se a tela atual é a tela específica
+      return true; // Bloqueia o botão de voltar físico do dispositivo
+    }
+    return false; // Permite o comportamento padrão do botão de voltar
+  };
+  const proximaOcorrencia =
+    lastTime && lastTime.entrada === 0 ? "Entrada" : "Saída";
 
   return (
     <View style={styles.container}>
@@ -141,9 +152,7 @@ export default PointRegister = () => {
             <Text style={styles.lastTimeText}>
               Data: {lastTime.data_registro}
             </Text>
-            <Text style={styles.lastTimeText}>
-              {lastTime.entrada === 0 ? "Entrada" : "Saída"}
-            </Text>
+            <Text style={styles.lastTimeText}>{proximaOcorrencia}</Text>
           </View>
         )}
       </View>
