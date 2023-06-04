@@ -11,6 +11,36 @@ A Tela "Cadastro" possui um formulário contendo: Nome, e-mail, telefone, nº do
 <li>RF-01 Efetuar cadastro  </li>
 </ul>
 
+### Teste de Funcionalidades:
+
+Tela de cadastro em branco para ser preenchida pelo administrador:
+
+![cadastroembranco](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/90341b98-64f7-4f4c-a582-a5e10d39f7fc)
+
+Tela de cadastro preenchida incorretamente, portanto uma mensagem de erro aparece:
+
+![cadastroerrocpf](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/23a4978b-ccd7-4e98-91af-bd56de8f1297)
+
+Tela de cadastro preenchida corretamente:
+
+![cadastropreenchido](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/2941d417-c460-4b29-81d6-705ec3bf554b)
+
+Página de informações do usuário cadastrado:
+
+![infodousuario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/731d79d9-df46-44d5-884f-cd54037ca421)
+
+Processo de atualização dos dados cadastrados:
+
+![atualizandoinfo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/20852ab8-da88-4755-be23-ab46b3311dfd)
+
+Dados de cadastro atualizados:
+
+![infoatualizadadousuario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/563127c5-f76a-4aad-8233-85d170aa228c)
+
+Deletar uma conta:
+
+![deletaraconta](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/efe5da54-8612-4333-9c2f-2c4491b095d5)
+
 ## Login
 
 A Tela "Login" possui dois campos para que o funcionario utlize o Nº do funcionário e a senha para conseguir acessar o aplicativo.
@@ -22,6 +52,10 @@ A Tela "Login" possui dois campos para que o funcionario utlize o Nº do funcion
 <ul>
 <li>RF-02 Efetuar login  </li>
 </ul>
+
+### Teste de Funcionalidades:
+
+
 
 ## Marcação de Ponto
 
