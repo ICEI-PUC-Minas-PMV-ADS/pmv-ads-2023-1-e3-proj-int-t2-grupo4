@@ -45,6 +45,33 @@ CT-03 – Registrar entrada/saída
 Critérios de Êxito: Todos critérios de êxitos atendidos
 
 
+CT-04 – Mostrar o horário registrado
+
+
+![horarioregistrado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/6740d569-5244-455a-8a17-98a57220d5c2)
+
+1- Acessar o Aplicativo
+
+2- Clicar no botão de registrar as horas
+
+3- Verificar se as horas foram registradas com sucesso 
+
+Critérios de Êxito: Todos critérios de êxitos atendidos
+
+
+CT-05 – Mostrar o tempo que se passou desde a entrada no sistema
+
+
+![telacompontoregistrado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/428b1ac6-4ad0-4454-a807-ef1b058a5b45)
+
+1- Acessar o Aplicativo
+
+2- Clicar no botão de registrar as horas
+
+3- Na parte inferior do botão de verificar o espelho do ponto deverá mostrar qual a data e o horário que foi registrado por último
+
+Critérios de Êxito: Todos critérios de êxitos atendidos
+
 
 CT-09 - Informações do Usuário 
 
@@ -60,3 +87,5 @@ CT-09 - Informações do Usuário
 4- Ser possivel atualizar as informações 
 
 Critérios de Êxito: Todos critérios de êxitos atendidos
+
+
