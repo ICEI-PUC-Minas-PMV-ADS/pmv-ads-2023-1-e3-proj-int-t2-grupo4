@@ -77,13 +77,14 @@ Após realizar o login:
 
 A Tela "Marcação de Ponto" possui um widget onde o usuário irá pressionar o horário será registrado no banco de dados. 
 
-![ponto](./img/ponto.png)
+![img1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/103431710/d1299c6f-a36e-4798-86ed-b7e2123ffc80)
 
 ### Requisitos atendidos:
 <ul>
 <li>RF-03 - Registrar entrada/saída</li>
 <li>RF-04 - Mostrar o horário registrado</li>
 </ul>
+
 
 ## Página de Registros Realizados
 
