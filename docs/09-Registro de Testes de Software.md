@@ -59,19 +59,59 @@ CT-04 – Mostrar o horário registrado
 Critérios de Êxito: Todos critérios de êxitos atendidos
 
 
-CT-05 – Mostrar o tempo que se passou desde a entrada no sistema
+CT-05 – Editar as informações do Usuário
 
 
-![telacompontoregistrado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/428b1ac6-4ad0-4454-a807-ef1b058a5b45)
+![popupdeatualizacao](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/b09929f7-d976-40f9-8228-2ed340d7459c)
 
-1- Acessar o Aplicativo
+1- Fazer o login
 
-2- Clicar no botão de registrar as horas
+2- Clicar na opção PERFIL
 
-3- Na parte inferior do botão de verificar o espelho do ponto deverá mostrar qual a data e o horário que foi registrado por último
+3- Clicar na opção ATUALIZAR INFORMAÇÕES
+
+4- Atualizar informações
+
+5- Salvar .
 
 Critérios de Êxito: Todos critérios de êxitos atendidos
 
+CT-06 – Impossibilitar a existência de CPF duplicado
+
+
+![cpfduplicado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/b37bdbf0-66e5-48d1-a621-673056e8f562)
+
+1- Fazer o login como administrador
+
+2- Clicar na opção REGISTRAR USUÁRIO
+
+3- Preencher os campos com o CPF duplicado
+
+4- Salvar.
+
+CT-07 – Histórico dos dias anteriores
+
+
+![horarioregistrado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/b81e1695-76f7-4321-8e62-c60b5801d79f)
+
+1- Fazer o login
+
+2- Clicar na opção HISTÓRICO
+
+3- Verificar se o aplicativo exibe o histórico dos registros.
+
+CT-08 – Impossibilitar um CPF com mais de 11 digitos
+
+
+![cpfcom11digitos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4/assets/85715072/c987402c-ada2-4595-a36d-26f10d22eea7)
+
+1- Fazer o login como administrador
+
+2- Clicar na opção REGISTRAR USUÁRIO
+
+3- Preencher os campos com o CPF que contenha mais de 11 digitos
+
+4- Salvar.
 
 CT-09 - Informações do Usuário 
 
