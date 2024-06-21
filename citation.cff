@@ -1,0 +1,26 @@
+message: Please cite this software using these metadata.
+title: Punch Clock Easy
+authors:
+  - family-names: Aston Ferreira Costa
+    given-names:  Gabriel
+  - family-names: Merlo Corrêa
+    given-names: Ian
+  - family-names: Santos Andrade
+    given-names: Laura
+  - family-names: Henrique Caetano Soares
+    given-names: Pedro
+  - family-names: Alvarenga Rodrigues
+    given-names: Rafael
+  - family-names: Alves de Souza
+    given-names: Rafael
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Curcino De Lima
+    given-names: Mateus
+keywords:
+  - ponto
+  - relógio
+  - pceasy
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-int-t2-grupo4
+version: 1.0.0
+date-released: 2023-12-14
